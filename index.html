@@ -41,6 +41,7 @@
 		float: none;
 		margin-bottom: 10px;
 	}
+	    ul li, ol li{text-align: left;}
     </style>
  
 </head>
@@ -64,7 +65,9 @@
 
 
 	<div id="accordion">
-	  <div class="card" style="width: 90vw; margin-top: 20vh;">
+
+<!-- first card -->
+	<div class="card" style="width: 90vw; margin-top: 20vh;">
 	    <div class="card-header" id="headingOne">
 	      <h5 class="mb-0" style="text-align: center;">
 	        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
@@ -76,38 +79,62 @@
 	    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
 	      <div class="card-body" style="text-align: center;">
 	        <h2>RESEARCH</h2>
-		      <h3>RESEARCH</h3>
-		      From the reading <a href="https://www.aclweb.org/anthology/N18-3011.pdf">Construction of the Literature Graph in Semantic Scholar</a> I have obtained information 
-		      about a possible structure to give also to my work:
+		      <h4>Theoric inputs</h4>
+		      <p>From the reading <a href="https://www.aclweb.org/anthology/N18-3011.pdf">Construction of the Literature Graph in Semantic Scholar</a> I have obtained information 
+		      about a possible generic structure to give also to my work:</p>
 		      <ol>
-			      <li></li>
+			      <li><b>Pre-processing of the data</b>: this first step consists of different passages which allow to transform the data in such a way that it is readable
+			      by the software used to carry out the task;</li>
+			      <li><b>Model</b>: it is organized the model which shall be passed from the following steps untill the final test;</li>
+			      <li><b>Training</b>: train the software on a set of organized data proportioned with the final set;</li>
+			      <li><b>Decoding</b>: decode the information obtained as output of the training phase to understand the quality of the results;</li>
+			      <li><b>Final test</b>: test the software on a final smaller set of data to see if the predictions made by the spftware are reliable.</li>
 		      </ol>
+		      <p>From the notions reported in the article it has come out that there is in certain cases the need to make use of more than one software, each one for different
+		      purposes. In the cited article, for instance the writers make use of 3 different ones in order to extract the titles, citations and authors: one to tokenize the
+		      text, one for embedding the lowercase tokens and another to used the transformed data and carry out the final task (recognition of the paths).
+		      From this article I have understood that I may try to look for a software with more features which allow to use less other external softwares to carry out the task.
+		      </p>
 			     
-		      <h3>SOFTWARES RETRIEVED</h3>
+		      <h4>Retrieved Softwares</h4>
 			<ul>
-				<li><a href="https://github.com/allenai/allennlp">ScienceParse;</a></li>
-				<li><a href="https://pdfbox.apache.org/">Apache’s PDFBox;</a></li>
-				<li><a href="https://nlp.stanford.edu/projects/glove/">GloVe;</a></li>
-				<li><a href="https://github.com/kermitt2/grobid">Grobid;</a></li>
-				<li><a href="https://github.com/exciteproject/">EXCITE.</a></li>
+				<li><a href="https://github.com/allenai/allennlp"><b>ScienceParse</b></a> to carry out the main task;</li>
+				<li><a href="https://pdfbox.apache.org/"><b>Apache’s PDFBox</b></a> to tokenize the text of each single PDF page;</li>
+				<li><a href="https://nlp.stanford.edu/projects/glove/"><b>GloVe</b></a> to embed the lowercase tokens;</li>
+				<li><a href="https://github.com/kermitt2/grobid"><b>Grobid</b>;</a></li>
+				<li><a href="https://github.com/exciteproject/"><b>EXCITE</b>.</a></li>
 			</ul>
+		      
 		<h2>METHODOLOGY</h2>
 		      <ol>
-		     <li> As first passage look for literature letting me understand which are the main steps I’ll have to take into account for working with pdf data extraction 
+			<li> As first passage look for literature letting me understand which are the main steps I’ll have to take into account for working with pdf data extraction 
 			     (e.g. if I have to use one or more softwares, in which passages the software(s) is/are required); </li>
+			<li>Use the scientific paper citations to look for correlated paper, only in a first phase in order to begin to understand the constraints of the research I am making;</li>
 			<li>parameters to classify the softwares:</li>
-			      <ul>
+			        <ul>
 				<li>programming language (al momento java e python);</li>
 				<li>number of features and need for other softwares;</li>
 				<li>other (?).</li>
 				</ul>
 			</ol>
 
-		<p>DON'T UNDERSTAND</p>
-		<p>BIBLIOGRAPHY</p>
+		<h2>DON'T UNDERSTAND</h2>
+		      <p>Do all the steps which I have defined in the 'Theoric input' part be necessary for my final work. </p>
+		      
+		<h2>BIBLIOGRAPHY</h2>
+		      <ul>
+			      <li><a href="https://www.aclweb.org/anthology/N18-3011.pdf">Construction of the Literature Graph in Semantic Scholar</a></li>
+			    <li><a href="https://arxiv.org/abs/1802.08301">Content-Based Citation Recommendation</a></li>
+			     <li><a href="https://www.aaai.org/Papers/Workshops/2007/WS-07-14/WS07-14-006.pdf">Author Disambiguation Using Error-driven Machine Learning with a Ranking Loss Function</a></li>
+			     <li><a href="https://ieeexplore.ieee.org/document/7991559"> Luca Weihs and Oren Etzioni. 2017. Learning to predict citation-based impact measures. In JCDL.</a></li>
+			      <li><a href="https://aaai.org/ocs/index.php/WS/AAAIW15/paper/view/10185/10244">Marco Valenzuela, Vu Ha, and Oren Etzioni. 2015. Identifying meaningful citations. In AAAI Workshop (Scholarly Big Data).</a></li>
+		      </ul>
+		      <p>P.S. This is not all the bibliography I've read but it is all the reading I am interested in reading by the next lesson</p>
 	      </div>
 	    </div>
 	  </div>
+<!-- end of first card -->
+		
 	</div>
 
 </body>
