@@ -1,3 +1,3 @@
-# pdf-to-structured-citations (To_SCi)
+# pdf-to-structured-citations (to_SCi)
 
 This project aims to be part of the wider Open Citations project. In accordance with the Open Citations objectives (making available 'open bibliographic and citation data by the use of Semantic Web (Linked Data) technologies') the pdf-to-structured-citations project aims to expand the basis of the citation data which Open Citations makes available. It wants to do so by offering a useful tool through which automatically extrapolate citations from PDF files and make them available to the Open Citation systems. I am trying to achieve this by finding out a software through which efficiently extract citations from files in PDF formats (i.e. dealing with unstructured data, which are not machine-readable) and transform them into structured data (and therefore machine readable and processable by the Open citations softwares).
