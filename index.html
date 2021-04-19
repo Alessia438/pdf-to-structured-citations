@@ -110,6 +110,25 @@
 		      </p>
 		      <br>
 		      <h4>Grobid</h4>
+		      <p>GROBID definition:</p>
+		      <ol>
+			<li>GROBID is a machine learning library;</li>
+			<li>it can extract, parse and re-structure raw documents such as PDF;</li>
+			<li>it transforms raw information into structured XML/TEI encoded documents.</li>
+		      <p>The following functionalities are available:</p>
+			<ul>
+				<li>References extraction and parsing. All the usual publication metadata are covered (including DOI, PMID, etc.).</li>
+				<li>Citation contexts recognition and resolution to the full bibliographical references of the article.</li>
+				<li>Parsing of names, in particular author names in references (distinct model from the header ones).</li>
+				<li>Parsing of dates, ISO normalized day, month, year.</li>
+				<li>Consolidation/resolution of the extracted bibliographical references using the biblio-glutton service or the CrossRef REST API.</li>
+				<li>PDF coordinates for extracted information, allowing to create "augmented" interactive PDF.</li>
+			</ul>
+			<p>GROBID uses optionally Deep Learning models relying on the DeLFT library, a task-agnostic Deep Learning framework for sequence labelling and text classification.</p>
+			<p>The advantage of Grobid from a computational point of view, is that it is available in three different programming languages Python, Java and Javascript (Node.js). 
+				All these clients will take advantage of the multi-threading for scaling large set of PDF processing. </p>
+			<p>A problem is that there is no certainty that it works on Windows system.</p>
+
 		      <br>
 		      <h4>EXCITE</h4>
 		      <p>Excite is a project composed of different but dependent subsections:</p>
@@ -162,7 +181,9 @@
 			     <li><a href="https://www.aaai.org/Papers/Workshops/2007/WS-07-14/WS07-14-006.pdf">Author Disambiguation Using Error-driven Machine Learning with a Ranking Loss Function</a></li>
 			     <li><a href="https://ieeexplore.ieee.org/document/7991559"> Luca Weihs and Oren Etzioni. 2017. Learning to predict citation-based impact measures. In JCDL.</a></li>
 			      <li><a href="https://aaai.org/ocs/index.php/WS/AAAIW15/paper/view/10185/10244">Marco Valenzuela, Vu Ha, and Oren Etzioni. 2015. Identifying meaningful citations. In AAAI Workshop (Scholarly Big Data).</a></li>
-		      </ul>
+		     <li><a href="http://slides.com/janagelavik/grobid#/3">GROBID in 30 slides - GROBID Documentation</a></li>
+			      <li><a href="https://grobid.readthedocs.io/en/latest/grobid-04-2015.pdf">Grobid, Metadata extraction from PDF documents using machine learning tools in INSPIRE-HEP</a></li>
+			</ul>
 	      </div>
 	    </div>
 	  </div>
