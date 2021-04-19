@@ -42,10 +42,11 @@
 		margin-bottom: 10px;
 	}
 	ul li, ol li{text-align: left;}
-	svg .bi bi-arrow-up-square{
-		align:auto;
+	a.back-to-top.dark {
+		margin: auto;
 		padding-left: 30vw;
 	}
+	p{text-align:justify;}
     </style>
  
 </head>
@@ -101,17 +102,24 @@
 		      From this article I have understood that I may try to look for a software with more features which allow to use less other external softwares to carry out the task.
 		      </p>
 		      <br>
-		      <h4>How does Grobid work</h4>
+		      <h4>Grobid</h4>
 		      <br>
-		      <h4>How does EXCITE work</h4>
+		      <h4>EXparser</h4>
 			     
 		      <h4>Retrieved Softwares</h4>
-			<ul>
-				<li><a href="https://github.com/allenai/allennlp"><b>ScienceParse</b></a> to carry out the main task;</li>
-				<li><a href="https://pdfbox.apache.org/"><b>Apache’s PDFBox</b></a> to tokenize the text of each single PDF page;</li>
-				<li><a href="https://nlp.stanford.edu/projects/glove/"><b>GloVe</b></a> to embed the lowercase tokens;</li>
-				<li><a href="https://github.com/kermitt2/grobid"><b>Grobid</b>;</a></li>
-				<li><a href="https://github.com/exciteproject/"><b>EXCITE</b>.</a></li>
+		      <ul>
+			      <li>Parsers</li>
+					<ul>
+						<li><a href="https://github.com/allenai/allennlp"><b>ScienceParse</b></a> is able to parse scientific papers and return them in structured form;</li>
+						<li><a href="https://github.com/kermitt2/grobid"><b>Grobid</b></a> for extracting, parsing and re-structuring raw documents into structured XML/TEI encoded documents;</li>
+						<li><a href="https://github.com/exciteproject/"><b>EXparser</b></a> is a tool for extracting and segmenting reference strings from PDF documents. It is provided by the project EXCITE.</li>
+					</ul>
+			
+			      <li>Others</li>
+					<ul>
+						<li><a href="https://pdfbox.apache.org/"><b>Apache’s PDFBox</b></a> to tokenize the text of each single PDF page;</li>
+						<li><a href="https://nlp.stanford.edu/projects/glove/"><b>GloVe</b></a> to embed the lowercase tokens;</li>
+					</ul>
 			</ul>
 		      
 		<h3>METHODOLOGY</h3>
@@ -121,7 +129,7 @@
 			<li>Use the scientific paper citations to look for correlated paper, only in a first phase in order to begin to understand the constraints of the research I am making;</li>
 			<li>parameters to classify the softwares:</li>
 			        <ul>
-				<li>programming language (al momento java e python);</li>
+				<li>programming language (up to now java e python);</li>
 				<li>number of features and need for other softwares;</li>
 				<li>other (?).</li>
 				</ul>
