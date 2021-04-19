@@ -105,7 +105,17 @@
 		      <h4>Grobid</h4>
 		      <br>
 		      <h4>EXparser</h4>
-			     
+		      <p>Excite is a project composed of different but dependent subsections:</p>
+		      <ul>
+				<li><a href=”https://github.com/exciteproject/Exparser”>Exparser</a>: to extract and segment the PDF citations;</li>
+				<li><a href=”https://github.com/exciteproject/EXmatcher”>EXmatcher</a>: dedicated to the task of citation matching in EXCITE;</li>
+				<li><a href=”https://github.com/exciteproject/EXpublisher”>EXpublisher</a>: is dedicated to the task of converting EXCITE Data to a JSON file with OCC ontology;</li>
+				<li><a href=”https://github.com/exciteproject/EXgoldstandard”>EXgoldstandard</a>: created for the evaluation and training of EXmatcher and EXparser.</li>
+			</ul>
+			<p>The language is mainly python and it has the advantage of having in itself all the passages required to test and use the software 
+				(it seems that it does not require external systems to make parts of the job like with ScienceParse).</p>
+			<p><a href=”https://github.com/exciteproject/papers”>Here</a> are the related bibliographic papers (which I have to read to better understand how Excite works).</p>
+			
 		      <h4>Retrieved Softwares</h4>
 		      <ul>
 			      <li>Parsers</li>
@@ -118,7 +128,7 @@
 			      <li>Others</li>
 					<ul>
 						<li><a href="https://pdfbox.apache.org/"><b>Apache’s PDFBox</b></a> to tokenize the text of each single PDF page;</li>
-						<li><a href="https://nlp.stanford.edu/projects/glove/"><b>GloVe</b></a> to embed the lowercase tokens;</li>
+						<li><a href="https://nlp.stanford.edu/projects/glove/"><b>GloVe</b></a> to embed the lowercase tokens.</li>
 					</ul>
 			</ul>
 		      
@@ -127,6 +137,8 @@
 			<li> As first passage look for literature letting me understand which are the main steps I’ll have to take into account for working with pdf data extraction 
 			     (e.g. if I have to use one or more softwares, in which passages the software(s) is/are required); </li>
 			<li>Use the scientific paper citations to look for correlated paper, only in a first phase in order to begin to understand the constraints of the research I am making;</li>
+			<li>look for some relevant parsers (and eventually other softwares required in order to carry out correlated tasks) and in a second moment look to each single system and find 
+				out the most relevant features and compare them. If I am not satisfied by the ones I have retrieved up to that moment I continue looking for other softwares.</li>
 			<li>parameters to classify the softwares:</li>
 			        <ul>
 				<li>programming language (up to now java e python);</li>
@@ -139,6 +151,7 @@
 		      <p>Do all the steps which I have defined in the 'Theoric input' part be necessary for my final work. </p>
 		      
 		<h3>BIBLIOGRAPHY</h3>
+		      <p>This section aims at keeping track of the lectures I found out during the week, even if I didn't have time to read them all.</p>
 		      <ul>
 			      <li><a href="https://www.aclweb.org/anthology/N18-3011.pdf">Construction of the Literature Graph in Semantic Scholar</a></li>
 			    <li><a href="https://arxiv.org/abs/1802.08301">Content-Based Citation Recommendation</a></li>
@@ -146,7 +159,6 @@
 			     <li><a href="https://ieeexplore.ieee.org/document/7991559"> Luca Weihs and Oren Etzioni. 2017. Learning to predict citation-based impact measures. In JCDL.</a></li>
 			      <li><a href="https://aaai.org/ocs/index.php/WS/AAAIW15/paper/view/10185/10244">Marco Valenzuela, Vu Ha, and Oren Etzioni. 2015. Identifying meaningful citations. In AAAI Workshop (Scholarly Big Data).</a></li>
 		      </ul>
-		      <p>P.S. This is not all the bibliography I've read but it is all the reading I am interested in reading by the next lesson</p>
 	      </div>
 	    </div>
 	  </div>
