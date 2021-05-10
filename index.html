@@ -102,56 +102,7 @@
 		      <p></p>
 		      <br>
 
-		      <h4>Grobid</h4>
-		      <p>GROBID definition:</p>
-		      <ol>
-			<li>GROBID is a machine learning library;</li>
-			<li>it can extract, parse and re-structure raw documents such as PDF;</li>
-			<li>it transforms raw information into structured XML/TEI encoded documents.</li>
-			</ol>
-		      <p>The following functionalities are available:</p>
-			<ul>
-				<li>References extraction and parsing. All the usual publication metadata are covered (including DOI, PMID, etc.).</li>
-				<li>Citation contexts recognition and resolution to the full bibliographical references of the article.</li>
-				<li>Parsing of names, in particular author names in references (distinct model from the header ones).</li>
-				<li>Parsing of dates, ISO normalized day, month, year.</li>
-				<li>Consolidation/resolution of the extracted bibliographical references using the biblio-glutton service or the CrossRef REST API.</li>
-				<li>PDF coordinates for extracted information, allowing to create "augmented" interactive PDF.</li>
-			</ul>
-			<p>GROBID uses optionally Deep Learning models relying on the DeLFT library, a task-agnostic Deep Learning framework for sequence labelling and text classification.</p>
-			<p>The advantage of Grobid from a computational point of view, is that it is available in three different programming languages Python, Java and Javascript (Node.js). 
-				All these clients will take advantage of the multi-threading for scaling large set of PDF processing. </p>
-			<p>A problem is that there is no certainty that it works on Windows system.</p>
-
-		      <br>
-		      <h4>EXCITE</h4>
-		      <p>Excite is a project composed of different but dependent subsections:</p>
-		      <ul>
-				<li><a href=”https://github.com/exciteproject/Exparser”>Exparser</a>: to extract and segment the PDF citations;</li>
-				<li><a href=”https://github.com/exciteproject/EXmatcher”>EXmatcher</a>: dedicated to the task of citation matching in EXCITE;</li>
-				<li><a href=”https://github.com/exciteproject/EXpublisher”>EXpublisher</a>: is dedicated to the task of converting EXCITE Data to a JSON file with OCC ontology;</li>
-				<li><a href=”https://github.com/exciteproject/EXgoldstandard”>EXgoldstandard</a>: created for the evaluation and training of EXmatcher and EXparser.</li>
-			</ul>
-			<p>The language is mainly python and it has the advantage of having in itself all the passages required to test and use the software 
-				(it seems that it does not require external systems to make parts of the job like with ScienceParse).</p>
-			<p><a href=”https://github.com/exciteproject/papers”>Here</a> are the related bibliographic papers (which I have to read to better understand how Excite works).</p>
-			
-		      <h4>Retrieved Softwares</h4>
-		      <ul>
-			      <li>Parsers</li>
-					<ul>
-						<li><a href="https://github.com/allenai/allennlp"><b>ScienceParse</b></a> is able to parse scientific papers and return them in structured form;</li>
-						<li><a href="https://github.com/kermitt2/grobid"><b>Grobid</b></a> for extracting, parsing and re-structuring raw documents into structured XML/TEI encoded documents;</li>
-						<li><a href="https://github.com/exciteproject/"><b>EXparser (EXCITE)</b></a> is a tool for extracting and segmenting reference strings from PDF documents. It is provided by the project EXCITE.</li>
-					</ul>
-			
-			      <li>Others</li>
-					<ul>
-						<li><a href="https://pdfbox.apache.org/"><b>Apache’s PDFBox</b></a> to tokenize the text of each single PDF page;</li>
-						<li><a href="https://nlp.stanford.edu/projects/glove/"><b>GloVe</b></a> to embed the lowercase tokens.</li>
-					</ul>
-			</ul>
-		    <br>  
+		       
 		<h3>METHODOLOGY</h3>
 		      <ol>
 			<li> As first passage look for literature letting me understand which are the main steps I’ll have to take into account for working with pdf data extraction 
@@ -180,15 +131,15 @@
 
 <!-- last card -->
 	<div class="card" style="width: 90vw; margin-top: 20vh;">
-	    <div class="card-header" id="headingOne">
+	    <div class="card-header" id="headingTwo">
 	      <h5 class="mb-0" style="text-align: center;">
-	        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+	        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
 	          Next meeting: Tuesday 04/20/2020 
 	        </button>
 	      </h5>
 	    </div>
 
-	    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+	    <div id="collapseTwo" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
 	      <div class="card-body" style="text-align: center;">
 	        <h3>RESEARCH</h3>
 		      <br>
