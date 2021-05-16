@@ -1,0 +1,460 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<title>PDF to Structured Citations</title>
+	<!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <style type="text/css">
+	body {
+		margin: 0;
+		font-family: "Nunito Sans", sans-serif;
+		font-size: 1rem;
+		font-weight: 300;
+		line-height: 1.5;
+		color: #565264;
+		text-align: left;
+		background-color: #D1C3BD;
+	}
+	button.btn-link{
+		color: #565264;
+		text-decoration: none;
+		font-size: bold;
+		text-decoration:none; 
+	}
+
+	button.btn-link:hover{
+		color: #735F6B; 
+		text-decoration:none; 
+		cursor:pointer;  
+	}
+	.card-body{color: black;}
+	.card {
+		margin: 0 auto;
+		float: none;
+		margin-bottom: 10px;
+	}
+	ul li, ol li{text-align: left;}
+	a.back-to-top.dark {
+		margin: auto;
+		padding-left: 30vw;
+	}
+	p{text-align:justify;}
+	h1 {
+	    font-family: Snell Roundhand;
+	    text-align: center;
+	    margin-top: 10vh;
+	    font-size: xxx-large;
+	}
+	h2, h3{
+		padding: 50px 0px 30px 0px;
+	}
+
+	h4{padding: 30px 20px 20px 0px;}
+
+	#protocol{    
+		text-align: justify;
+	    border-style: solid;
+	    padding: 40px 60px 40px 60px;
+	}
+	span.highlight{background-color: yellow;}
+    </style>
+ 
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	  <a class="navbar-brand">to_SCi</a>
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+	    <span class="navbar-toggler-icon"></span>
+	  </button>
+	  <div class="collapse navbar-collapse" id="navbarNav">
+	    <ul class="navbar-nav">
+	      <li class="nav-item">
+	        <a class="nav-link" href="#">Home</a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link" href="https://github.com/Alessia438/pdf-to-structured-citations" target=”_blank”>GitHub_Repository</a>
+	      </li>
+	    </ul>
+	  </div>
+	</nav>
+
+	<h1>PDF to structured citations</h1>
+	
+	<div id="accordion">
+
+<!-- first card -->
+<div class="card" style="width: 90vw; margin-top: 20vh;">
+	    <div class="card-header" id="headingOne">
+	      <h5 class="mb-0" style="text-align: center;">
+	        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+	          Next meeting: Tuesday 05/18/2020 
+	        </button>
+	      </h5>
+	    </div>
+
+	    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+	      <div class="card-body" style="text-align: center;">
+	        <h3>First draft of the protocol for a systematic literature review</h3>
+
+			<!-- begin div protocol -->
+
+			<div id="protocol">
+
+			<h4>Abstract</h4>
+			<p>Converting data from non structured formats, like PDF, into structured data, has as most relevant consequence the fact that the information contained in those data can be managed also by machines. There are many softwares with this aim, but through a literature review it is possible to understand which software is better than the others in order to carry out a specific task in this context. 
+			This protocol represents the methodology followed in order to make a sistematic review of the literature regarding data extraction and manipulation from PDF files. In particular, the focus is on the software which are particularly useful for the extraction of citations from PDF file formats. Therefore the objective of this research, which is reflected on the typology of literature review, is that of retrieving the most suitable software for that purpose, i.e. retrieving and manipulating citations from PDF files.</p>
+
+			<h4>Inclusion criteria:</h4>
+			<p><i>General IC for papers (all of them are mandatory):</i></p>
+			<ul>
+				<li>Languages: en, it;</li>
+				<li>Publication Date: from 2005 on.</li>
+			</ul>
+			<p><i>IC for screening procedure on papers (one of them is enough, but the more the better. This part should be still quite inclusive, if in doubt keep the article)</i></p>
+			<ul>
+				<li>Title:</li>
+					<ul>
+						<li>includes the name of a software for data extraction from PDF files;</li>
+						<li>contains a procedure for data extraction for PDF;</li>
+						<li>includes both the strings ‘PDF’ and a word derived from ‘extract’.</li>
+					</ul>
+				<li>Abstract:</li>
+					<ul>
+						<li>contains the concept of “data extraction from PDF files”, also expressed in a different way (e.g. “This paper is concerned with the extrapolation of the information contained in the titles of files in PDF format.”);</li>
+						<li>includes the name of a software for data extraction from PDF files.</li>
+					</ul>
+				<li>Keywords:</li>
+					<ul>
+						<li>a keyword expressing the concept of extraction of data from PDF file formats e.g. “PDF extraction”;</li>
+						<li>two or more keywords, one including the word “PDF” and the other expressing the concept of extraction e.g. “data extraction” + “PDF” or “data extractor” + “software” + “PDF”.</li>
+					</ul>
+			</ul>
+			<p><i>IC for screening procedure:</i></p>
+			<ul>
+				<li>Quality criteria (still to define).</li>
+			</ul>
+
+
+			<h4>Search strategies:</h4>
+			<p>Step 1 <i>(seed papers)</i>:</p>
+			<ul>
+				<li>Starting from papers and softwares proposed by the professor as basis for the reserach, I am making backward and forward research;</li>
+				<li>PAPERS: "Construction of the Literature Graph in Semantic Scholar"</li>
+				<li>PROJECTS: "Grobid", "EXCITE project".</li>
+			</ul>
+			<p>Step 2 <i>(keywords)</i>:</p>
+			<ul>
+				<li>keyword search through the most used and efficient platforms: Google Scholar, Web of Science, Lens, EBSCO, ProQuest, IEEE Xplore;</li>
+				<li>forward e backward research on the papers retrieved with keywords. In particular the forward research has been carried out both manually and with the help of some platforms which have that specific functionality;</li>
+				<li>KEYWORDS LIST: “PDF extractor”, “PDF extractor software”, “extraction of information from PDF”, <i>to be continued...</i></li>
+				<li>PLATFORMS FOR FORWARD RESEARCH: Google Scholar, the ISI Citation Index.</li>
+			</ul>
+			<p>Step 3 <i>(first generic inclusion criteria)</i>:</p>
+			<ul>
+				<li>Keep the articles: </li>
+				<ul>
+					<li>retrieved with both generic and precise keywords (it allows to have a wide range of both specific resources and generic ones);</li>
+					<li>after title screening (absolute first check whether the topic of the article  is effectively related to the one I am interested in).</li>
+				</ul>
+				<li>Merge the articles and remove duplicates. </li>
+			</ul>
+			<p>Step 4 <i>(stop criterion)</i>:</p>
+			<ul>
+				<li>Repeat steps 2 and 3 until no new articles/papers/softwares are retrieved by new searches. Then, that is the moment to stop the research.</li>
+			</ul>
+			</p>
+			<h4>Screening procedures: <i>(successively)</i></h4>
+			<h4>Quality assessment criteria <i>(successively)</i></h4>
+			<h4>Strategies for data extraction, synthesis, and reporting. <i>(successively)</i></h4>
+			</div>
+
+			<!-- end div protocol -->
+
+			  <br> 
+
+			<h3>Doubts</h3>
+			<ul>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+			    
+			<h3>Bibliography</h3>
+			    <ul>
+				    <li><a href="https://doi.org/10.1177/0739456X17723971" target=”_blank”>Guidance on Conducting a Systematic Literature Review</a></li>
+				    <li>Kitchenham, B. A. & Charters, S. (2007). <a href="https://www.elsevier.com/__data/promis_misc/525444systematicreviewsguide.pdf" target=”_blank”>Guidelines for performing Systematic Literature Reviews</a> in Software Engineering (EBSE 2007-001). Keele University and Durham University Joint Report.</li>
+				</ul>
+	      	</div>
+	    </div>
+	  </div>
+<!-- end of first card -->
+
+
+
+
+
+
+<!-- second card -->
+<div class="card" style="width: 90vw; margin-top: 20vh;">
+	    <div class="card-header" id="headingTwo">
+	      <h5 class="mb-0" style="text-align: center;">
+	        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+	          Next meeting: Tuesday 05/11/2020 
+	        </button>
+	      </h5>
+	    </div>
+
+	    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+	      <div class="card-body" style="text-align: center;">
+	        <h3>Research</h3>
+			<br>
+			<h4>Features of Systematic Literature Reviews (Guidelines for performing Systematic Literature Reviews in Software Engineering)</h4>
+				<p>Some of the features that differentiate a systematic review from a conventional expert literature review are:</p>
+				<ol>
+					<li>Systematic reviews start by defining a <span class="highlight">review protocol</span> that specifies the research question being addressed and the methods that will be used to perform the review.</li>
+					<li>Systematic reviews are based on a defined <span class="highlight">search strategy</span> that aims to detect as much of the relevant literature as possible. </li>
+					<li>Systematic reviews <span class="highlight">document their search strategy</span> so that readers can assess their rigour and the completeness and repeatability of the process (bearing in mind that searches of digital libraries are almost impossible to replicate). </li>
+					<li>Systematic reviews require explicit <span class="highlight">inclusion and exclusion criteria</span> to assess each potential primary study.</li>
+					<li>Systematic reviews specify the information to be obtained from each primary study including <span class="highlight">quality criteria</span> by which to evaluate each primary study.</li>
+				</ol>
+			<br>
+			<h4>Structure of a systematic review (Guidance on Conducting a Systematic Literature Review)</h4>
+				<p>The articles proposes a structure for the research flow which is summarized by the following list:</p>
+				<ol>
+					<li>planning the review:</li>
+						<ul>
+						<li>identify the need for a review,</li>
+						<li>specify research questions,</li>
+						<li>develop a review protocol.</li>
+						</ul>
+					<li>conducting the review:</li>
+						<ul>
+						<li>identify and select primary studies, </li>
+						<li>extract, analyze, and synthesize data. </li>
+						</ul>
+					<li>reporting the review: </li>
+						<ul>
+						<li>write the report to disseminate their findings from the literature review.</li>
+						</ul>
+				</ol>
+				<p>In this moment the relevant part I am interested in is "planning the review". Indeed the first step in order to carry out a sistematic review, as stated in both the previous articles, is developing a protocol with some specifications defined in the articles themselves. Then, once finished, the protocol should be validated.</p> 
+
+		       
+		<h3>First draft of the protocol for a systematic literature review</h3>
+
+		<!-- begin div protocol -->
+
+		<div id="protocol">
+
+		<h4>Purpose of the study:</h4>
+		<p>A systematic literature review is necessary in order to obtain information about the softwares which allow data extraction from PDF file formats. The part of the text on which this software will be applied is the citations one. Therefore the objective of this research is that of retrieving the most suitable software for that purpose. </p>
+
+		<h4>Research questions:</h4>
+		<p>Which is the software whose features are the most suitable to retrieve references textual information from PDF files and translate them into structured data?</p>
+
+		<h4>Inclusion criteria:</h4>
+		<p>IC for search strategies:</p>
+		<ul>
+			<li>Languages: en, it;</li>
+			<li>Publication date: since 1993.</li>
+		</ul>
+		<p>IC for screening procedure:</p>
+		<ul>
+			<li>Quality criteria (still to define).</li>
+		</ul>
+
+		<h4>Search strategies:</h4>
+		<p>Step 1 <i>(seed papers)</i>:</p>
+		<ul>
+			<li>Starting from papers and softwares proposed by the professor as basis for the reserach, I am making backward and forward research;</li>
+			<li>PAPERS: "Construction of the Literature Graph in Semantic Scholar"</li>
+			<li>PROJECTS: "Grobid", "EXCITE project".</li>
+		</ul>
+		<p>Step 2 <i>(keywords)</i>:</p>
+		<ul>
+			<li>keyword search through the most used and efficient platforms: Google Scholar, Web of Science, Lens, EBSCO, ProQuest, IEEE Xplore;</li>
+			<li>forward e backward research on the papers retrieved with keywords. In particular the forward research has been carried out both manually and with the help of some platforms which have that specific functionality;</li>
+			<li>KEYWORDS LIST: “PDF extractor”, “PDF extractor software”, “extraction of information from PDF”, <i>to be continued...</i></li>
+			<li>PLATFORMS FOR FORWARD RESEARCH: Google Scholar, the ISI Citation Index.</li>
+		</ul>
+		<p>Step 3 <i>(first generic inclusion criteria)</i>:</p>
+		<ul>
+			<li>Keep the articles: </li>
+			<ul>
+				<li>retrieved with both generic and precise keywords (it allows to have a wide range of both specific resources and generic ones);</li>
+				<li>after title screening (absolute first check whether the topic of the article  is effectively related to the one I am interested in).</li>
+			</ul>
+			<li>Merge the articles and remove duplicates. </li>
+		</ul>
+		<p>Step 4 <i>(stop criterion)</i>:</p>
+		<ul>
+			<li>Repeat steps 2 and 3 until no new articles/papers/softwares are retrieved by new searches. Then, that is the moment to stop the research.</li>
+		</ul>
+		</p>
+		<h4>Screening procedures: <i>(successively)</i></h4>
+		<h4>Quality assessment criteria <i>(successively)</i></h4>
+		<h4>Strategies for data extraction, synthesis, and reporting. <i>(successively)</i></h4>
+		</div>
+
+		<!-- end div protocol -->
+
+		  <br> 
+
+		<h3>Doubts</h3>
+		<ul>
+			<li>I have a doubt about the inclusion/exclusion criteria in the protocol for the literature review: I should apply different criteria on the basis of the point of the research in which I am (e.g. during the research I should stick to generic criteria like the language of the papers or the title, while during the screening phase I should use more specific criteria like the quality of the material or the kind of data used). I am not sure about how I am supposed to manage them in a formal way. Can they be considered simply different inclusion/exclusion criteria or are they different from a formal point of view (and therefore they shall be represented in different places of the procols and in different ways)?</li>
+			<li>In a prior moment I din't get the distinction between the parameters required to make a systematic literature review (the container) and the parameters required to classify the softwares (the content). Am I supposed to insert in the protocol of the reserach also the taxonomy for the softwares or should this second one be part of a separate file, as it is a separate concept (i.e. another protocol which reports the steps of the identification and classification of the softwares)?</li>
+			<li>How should I do to formalize the protocol for the research? Would it be enough to follow the steps defined in these papers and make it available on a platform like Protocols.io?</li>
+			<li>Is it necessary that I’ll submit the protocol for a peer review? In all the articles I have read there is an “evaluation” step, after the creation of the protocol, that can be carried out by different people. Am I supposed to send it to external people or the teacher's supervision is enough?</li>
+		</ul>
+		    
+		<h3>Bibliography</h3>
+		    <ul>
+			    <li><a href="https://doi.org/10.1177/0739456X17723971" target=”_blank”>Guidance on Conducting a Systematic Literature Review</a></li>
+			    <li>Kitchenham, B. A. & Charters, S. (2007). <a href="https://www.elsevier.com/__data/promis_misc/525444systematicreviewsguide.pdf" target=”_blank”>Guidelines for performing Systematic Literature Reviews</a> in Software Engineering (EBSE 2007-001). Keele University and Durham University Joint Report.</li>
+			</ul>
+	      </div>
+	    </div>
+	  </div>
+<!-- end of second card -->
+
+
+
+
+
+
+
+
+<!-- last card -->
+	<div class="card" style="width: 90vw; margin-top: 20vh;">
+	    <div class="card-header" id="headingThree">
+	      <h5 class="mb-0" style="text-align: center;">
+	        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+	          Next meeting: Tuesday 04/20/2020 
+	        </button>
+	      </h5>
+	    </div>
+
+	    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+	      <div class="card-body" style="text-align: center;">
+	        <h3>Research</h3>
+		      <br>
+		      <h4>How does ScienceParse work</h4>
+		      <p>From the reading <a href="https://www.aclweb.org/anthology/N18-3011.pdf">Construction of the Literature Graph in Semantic Scholar</a> I have obtained information 
+		      about a possible generic structure to give also to my work:</p>
+		      <ol>
+			      <li><b>Pre-processing of the data</b>: this first step consists of different passages which allow to transform the data in such a way that it is readable
+			      by the software used to carry out the task;</li>
+			      <li><b>Model</b>: it is organized the model which shall be passed from the following steps untill the final test;</li>
+			      <li><b>Training</b>: train the software on a set of organized data proportioned with the final set;</li>
+			      <li><b>Decoding</b>: decode the information obtained as output of the training phase to understand the quality of the results;</li>
+			      <li><b>Final test</b>: test the software on a final smaller set of data to see if the predictions made by the spftware are reliable.</li>
+		      </ol>
+		      <p>From the notions reported in the article it has come out that there is in certain cases the need to make use of more than one software, each one for different
+		      purposes. In the cited article, for instance the writers make use of 3 different ones in order to extract the titles, citations and authors: one to tokenize the
+		      text, one for embedding the lowercase tokens and another to used the transformed data and carry out the final task (recognition of the paths).
+		      From this article I have understood that I may try to look for a software with more features which allow to use less other external softwares to carry out the task.
+		      </p>
+		      <br>
+		      <h4>Grobid</h4>
+		      <p>GROBID definition:</p>
+		      <ol>
+			<li>GROBID is a machine learning library;</li>
+			<li>it can extract, parse and re-structure raw documents such as PDF;</li>
+			<li>it transforms raw information into structured XML/TEI encoded documents.</li>
+			</ol>
+		      <p>The following functionalities are available:</p>
+			<ul>
+				<li>References extraction and parsing. All the usual publication metadata are covered (including DOI, PMID, etc.).</li>
+				<li>Citation contexts recognition and resolution to the full bibliographical references of the article.</li>
+				<li>Parsing of names, in particular author names in references (distinct model from the header ones).</li>
+				<li>Parsing of dates, ISO normalized day, month, year.</li>
+				<li>Consolidation/resolution of the extracted bibliographical references using the biblio-glutton service or the CrossRef REST API.</li>
+				<li>PDF coordinates for extracted information, allowing to create "augmented" interactive PDF.</li>
+			</ul>
+			<p>GROBID uses optionally Deep Learning models relying on the DeLFT library, a task-agnostic Deep Learning framework for sequence labelling and text classification.</p>
+			<p>The advantage of Grobid from a computational point of view, is that it is available in three different programming languages Python, Java and Javascript (Node.js). 
+				All these clients will take advantage of the multi-threading for scaling large set of PDF processing. </p>
+			<p>A problem is that there is no certainty that it works on Windows system.</p>
+
+		      <br>
+		      <h4>EXCITE</h4>
+		      <p>Excite is a project composed of different but dependent subsections:</p>
+		      <ul>
+				<li><a href=”https://github.com/exciteproject/Exparser” target=”_blank”>Exparser</a>: to extract and segment the PDF citations;</li>
+				<li><a href=”https://github.com/exciteproject/EXmatcher” target=”_blank”>EXmatcher</a>: dedicated to the task of citation matching in EXCITE;</li>
+				<li><a href=”https://github.com/exciteproject/EXpublisher” target=”_blank”>EXpublisher</a>: is dedicated to the task of converting EXCITE Data to a JSON file with OCC ontology;</li>
+				<li><a href=”https://github.com/exciteproject/EXgoldstandard” target=”_blank”>EXgoldstandard</a>: created for the evaluation and training of EXmatcher and EXparser.</li>
+			</ul>
+			<p>The language is mainly python and it has the advantage of having in itself all the passages required to test and use the software 
+				(it seems that it does not require external systems to make parts of the job like with ScienceParse).</p>
+			<p><a href=”https://github.com/exciteproject/papers” target=”_blank”>Here</a> are the related bibliographic papers (which I have to read to better understand how Excite works).</p>
+			
+		      <h4>Retrieved Softwares</h4>
+		      <ul>
+			      <li>Parsers</li>
+					<ul>
+						<li><a href="https://github.com/allenai/allennlp" target=”_blank”><b>ScienceParse</b></a> is able to parse scientific papers and return them in structured form;</li>
+						<li><a href="https://github.com/kermitt2/grobid" target=”_blank”><b>Grobid</b></a> for extracting, parsing and re-structuring raw documents into structured XML/TEI encoded documents;</li>
+						<li><a href="https://github.com/exciteproject/" target=”_blank”><b>EXparser (EXCITE)</b></a> is a tool for extracting and segmenting reference strings from PDF documents. It is provided by the project EXCITE.</li>
+					</ul>
+			
+			      <li>Others</li>
+					<ul>
+						<li><a href="https://pdfbox.apache.org/" target=”_blank”><b>Apache’s PDFBox</b></a> to tokenize the text of each single PDF page;</li>
+						<li><a href="https://nlp.stanford.edu/projects/glove/" target=”_blank”><b>GloVe</b></a> to embed the lowercase tokens.</li>
+					</ul>
+			</ul>
+		    <br>  
+		<h3>Methodology</h3>
+		      <ol>
+			<li> As first passage look for literature letting me understand which are the main steps I’ll have to take into account for working with pdf data extraction 
+			     (e.g. if I have to use one or more softwares, in which passages the software(s) is/are required); </li>
+			<li>Use the scientific paper citations to look for correlated paper, only in a first phase in order to begin to understand the constraints of the research I am making;</li>
+			<li>look for some relevant parsers (and eventually other softwares required in order to carry out correlated tasks) and in a second moment look to each single system and find 
+				out the most relevant features and compare them. If I am not satisfied by the ones I have retrieved up to that moment I continue looking for other softwares.</li>
+			<li>parameters to classify the softwares:</li>
+			        <ul>
+				<li>programming language (up to now java e python);</li>
+				<li>number of features and need for other softwares;</li>
+				<li>operating systems for which it is available (?);</li>
+				<li>other (?).</li>
+				</ul>
+			</ol>
+		  <br>    
+		<h3>Bibliography</h3>
+		      <ul>
+			      <li><a href="https://www.aclweb.org/anthology/N18-3011.pdf" target=”_blank”>Construction of the Literature Graph in Semantic Scholar</a></li>
+			    <li><a href="https://arxiv.org/abs/1802.08301">Content-Based Citation Recommendation</a></li>
+			     <li><a href="https://www.aaai.org/Papers/Workshops/2007/WS-07-14/WS07-14-006.pdf" target=”_blank”>Author Disambiguation Using Error-driven Machine Learning with a Ranking Loss Function</a></li>
+			     <li><a href="https://ieeexplore.ieee.org/document/7991559" target=”_blank”> Luca Weihs and Oren Etzioni. 2017. Learning to predict citation-based impact measures. In JCDL.</a></li>
+			      <li><a href="https://aaai.org/ocs/index.php/WS/AAAIW15/paper/view/10185/10244" target=”_blank”>Marco Valenzuela, Vu Ha, and Oren Etzioni. 2015. Identifying meaningful citations. In AAAI Workshop (Scholarly Big Data).</a></li>
+		     <li><a href="http://slides.com/janagelavik/grobid#/3" target=”_blank”>GROBID in 30 slides - GROBID Documentation</a></li>
+			      <li><a href="https://grobid.readthedocs.io/en/latest/grobid-04-2015.pdf" target=”_blank”>Grobid, Metadata extraction from PDF documents using machine learning tools in INSPIRE-HEP</a></li>
+			</ul>
+	      </div>
+	    </div>
+	  </div>
+<!-- end of last card -->
+		
+	</div>
+	
+	
+
+<div class="d-flex align-items-center p-4 neutral-1-bg-a8">
+  <a href="#" aria-hidden="true" data-attribute="back-to-top" class="back-to-top dark">
+    <svg class="bi bi-arrow-up-square" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/></svg>
+  </a>
+</div>
+
+</body>
+</html>
