@@ -174,29 +174,36 @@
 				<li>When no new article is retrieved by this method of research or when the operation at point 4 has been made on the last retrieved article, skip to step 2.</li>
 			</ol>
 			<p>Step 2 <i>(keywords)</i>:</p>
+			<p>This step directly follows the first one with a complementary perspective. Indeed, it is able to fill the eventual gap of papers and publications left by the previous step. At the end of this second step, all the available documents should be retrieved.</p>
 			<ul>
-				<li>keyword search through the most used and efficient platforms: Google Scholar, Web of Science, Lens, EBSCO, ProQuest, IEEE Xplore;</li>
-				<li>forward e backward research on the papers retrieved with keywords. In particular the forward research has been carried out both manually and with the help of some platforms which have that specific functionality;</li>
-				<li>KEYWORDS LIST: “PDF extractor”, “PDF extractor software”, “extraction of information from PDF”, <i>to be continued...</i></li>
-				<li>PLATFORMS FOR FORWARD RESEARCH: Google Scholar, the ISI Citation Index.</li>
+				<li>For each of the keywords in the “Keywords list” perform a research with the selected keyword through each of the platforms listed in “free open platforms”. For each of the articles retrieved by each platform, if its title is not in “Papers_to_keep” or “Papers_to_discard”, check the title, keywords and abstract. Whether the article seems useful for the purposes of the research, add its title and its DOI (or reference link if the DOI is not available) to the file “Papers_to_keep”, otherwise add them to “Papers_to_discard”.</li>
+				<li>For all the publications retrieved with the keyword search:</li>
+				<ol>
+					<li>Make backward research. Look at the articles cited by the reference papers by looking at the list of references at the end of the article. Then, for each of the articles retrieved with the backward research, if its title is not in “Papers_to_keep” or “Papers_to_discard”, check the title, keywords and abstract, otherwise do not take it into consideration. Whether the article seems useful for the purposes of the research, add its title and its DOI (or reference link if the DOI is not available) to the file “Papers_to_keep”, otherwise to “Papers_to_discard”.</li>
+					<li>Make forward search. The forward research is carried out both manually and with the help of some platforms which have that specific functionality (see “Platforms for forward research”). Then, for each of the articles retrieved with the forward research, if its title is not in “Papers_to_keep” or “Papers_to_discard”, check the title, keywords and abstract. Whether the article seems useful for the purposes of the research, add its title and its DOI (or reference link if the DOI is not available) to the file “Papers_to_keep”, otherwise add them to “Papers_to_discard”.</li>
+					<li>Tick in “Papers_to_keep” the title of the paper currently taken into consideration.</li>
+				</ol>
+				<li>Repeat the actions listed in point 2 for all the publications retrieved with the forward and the backward research (i.e. all the publications listed in “Papers_to_keep”, excepted the ones already ticked).</li>
+				<li>When no new article is retrieved by this method of research or when the operation at point 4 has been made on the last retrieved article, stop the research.</li>
 			</ul>
-			<p>Step 3 <i>(first generic inclusion criteria)</i>:</p>
+
+			<h4>Quality assessment</h4>
+			<p>Step 1:</p>
+			<p>Create 2 files (“useful_links”, “not_useful_links”). Both the files must be created on a digital file so that clusters of topics can be created. Indeed these files have a double objective:</p>
 			<ul>
-				<li>Keep the articles: </li>
-				<ul>
-					<li>retrieved with both generic and precise keywords (it allows to have a wide range of both specific resources and generic ones);</li>
-					<li>after title screening (absolute first check whether the topic of the article  is effectively related to the one I am interested in).</li>
-				</ul>
-				<li>Merge the articles and remove duplicates. </li>
+				<li>First of all it is used in order to separate the papers which recall a useful and valid or, vice versa, non-useful or invalid software.</li>
+				<li>The second reason is that of ordering the articles on the basis of their topic (i.e. the software).</li>
 			</ul>
-			<p>Step 4 <i>(stop criterion)</i>:</p>
-			<ul>
-				<li>Repeat steps 2 and 3 until no new articles/papers/softwares are retrieved by new searches. Then, that is the moment to stop the research.</li>
-			</ul>
-			</p>
-			<h4>Screening procedures: <i>(successively)</i></h4>
-			<h4>Quality assessment criteria <i>(successively)</i></h4>
+			<p>Step 2:</p>
+			<p>For each of the papers in “Papers_to_keep” read its full text. We outline three possible cases derived from the possible outcomes of the verification whether the articles include the points listed in IC for the papers full text or not.</p>
+			<ol>
+				<li>If the paper does not meet any of the requirements listed in IC for the papers full text, then remove it from “Papers_to_keep” and add it to “Papers_to_discard”;</li>
+				<li>Otherwise, if the paper contents meet at least one of the requirements of the first point in IC for the papers full text, add its title to “useful_software”;</li>
+				<li>Otherwise, if the paper sticks to the second point in IC for the papers full text, add the paper title to the file “not_useful_software”.</li>
+			</ol>
+
 			<h4>Strategies for data extraction, synthesis, and reporting. <i>(successively)</i></h4>
+			<p>NVivo (tool for data extraction and coding) (?)</p>
 			</div>
 
 			<!-- end div protocol -->
@@ -205,8 +212,8 @@
 
 			<h3>Doubts</h3>
 			<ul>
-				<li></li>
-				<li></li>
+				<li>Does it make sense to make a table and a flow diagram, once defined the workflow of the protocol? These would be two different ways to synthetize the flow, and help eventual re-users to better understand the process.</li>
+				<li>Do I need an authomatic way to retrieve the information contained in the text, in order to speed up the retrieval process?</li>
 				<li></li>
 				<li></li>
 			</ul>
