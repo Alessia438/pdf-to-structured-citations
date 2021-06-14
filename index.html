@@ -123,23 +123,30 @@
 	        <p>Also, since it seems like there will be lots of papers listed in all the three CSV files at a certain point (some to be fully read, some other still to be generally checked) I have tried to implement an semi-automatic way to check whether the new papers retrieved are already present in the CSV files or whether they have still to be added. Also this small software includes a part through which if the name or the ID of the paper considered ar not already listed in the CSV, they are automatically added to papers_to_analyze. But whether the data in which they have been writte in smaller than 2005, then, they are added to papers_to_discard. And finally, the rest of the string necessary in order to identify the papers are added manually.</p>
 
 	        <p>This is a piece of the code created in order to check the existence or not of the currently considered paper. It is repeated for all the three existing files:</p>
-			  <img src="img/verify_existence.png" style="padding-top: 20px; padding-bottom: 20px">
+	        <div id="over_img" style="overflow: overlay;">
+			  <img src="img/verify_existence.png" style="padding-top: 20px; padding-bottom: 30px">
+			  </div>
 
-	        <p>Then, this is the snippet which creates the new line in the CSV:</p>
-			  <img src="img/add_paper.png" style="padding-top: 20px; padding-bottom: 20px">
+	        <p>Then, this is the snippet which creates the new line in the CSV: if the paper could not be found in the CSV files, then, if the date is bigger than 2005, it is added to papers_to_keep, otherwise to papers_to_discard.</p>
+			  <img src="img/add_paper.png" style="padding-top: 16px; padding-bottom: 20px">
 
 			  <br> 
 
 			<h3>Doubts</h3>
 			<ul style="list-style-type: none;">
 				<li>
-					Come devo comportarmi con i paper di cui non sono specificati pagine o venue? Quando c’è il volume ma non la issue? E con le serie di libri?
+					I have some doubts about how to deal with specific cases of papers: 
+					<ol>
+					<li>In a few cases the pages or the venue are not specified (I want to point it out because it is a data which is normally present in the specifications of a paper, and it sounds strange not to retrieve that information). In these cases shall I leave a white space or there could be another explanation for this lack of data?</li>
+					<li>In a particular case, it is not clear whether the number corresponds to the issue or to the volume. Nonetheless, in both the cases the other data is missing. In these "mutilated" cases should I try in any way to find out the missing data or can I simply accept the fact that it is not specified (i.e. how deep am i supposed to go in this research?)</li>
+					<li>Should I make clear in some way whether a book belongs to a series or books or is it enough to specify the specific book, without mentioning the colleciton?</li>
+					</ol>
 				</li>
 				<li style="padding-top: 25px;"> 
-					è corretto se in alcuni campi inserisco le virgolette in modo che si possano mantenere le virgole come separatore delle parole di quei campi e non tra i campis tessi.
+					This is a mpore formal doubt about how to write in CSV (with the perspective of presenting this as part of the thesis material). In some fields, like the title, I need to put the double quotes in order to allow also titles with comas, which would be otherwise considered as separator among eements of the CSV. Is there a rule to decide whther to use comas or not, and eventually when?
 				</li>
-				<li>
-					Ho provato ad automatizzare il sistema di ricerca + inserimento se il paper non è già in paper to analyze.
+				<li style="padding-top: 25px;">
+					I tried to semi-automatize the process of verification and adding. Of course it is impossible to make it completely automatic but in this way, at leats, part of the work is done automatically. Is it fine if part of the work is carried out in this way? Shall I describe this fact in the protocol or is enough if it remains a particular implementation of my work?
 				</li>
 			</ul>
 			    
@@ -155,7 +162,7 @@
 	    <div class="card-header" id="headingTwo">
 	      <h5 class="mb-0" style="text-align: center;">
 	        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-	          Next meeting: Tuesday 06/10/2020 
+	          Tuesday 06/10/2020 
 	        </button>
 	      </h5>
 	    </div>
