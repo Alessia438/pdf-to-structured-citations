@@ -120,12 +120,11 @@
 	        <h4>Retrieving the papers for the literature review</h4>
 	        <p>Starting from the first seed paper I started processing it like it is described in the protocol. Firstly, I have checked its integrity with respect to the general and more specific parameters; then, I have transferred it in papers_to_keep. Finally I proceeded with the backward and forward search. In order to do so I have retrieved a lot of papers, in particular from the backward search and from the forward search, in particular thanks to Google Scholar.</p>
 	        <p>Also, since it seems like there will be lots of papers listed in all the three CSV files at a certain point (some to be fully read, some other still to be generally checked) I have tried to implement an semi-automatic way to check whether the new papers retrieved are already present in the CSV files or whether they have still to be added. Also this small software includes a part through which if the name or the ID of the paper considered ar not already listed in the CSV, they are automatically added to papers_to_analyze. But whether the data in which they have been writte in smaller than 2005, then, they are added to papers_to_discard. And finally, the rest of the string necessary in order to identify the papers are added manually.</p>
-	        <p>This is a piece of the code created in order to check the existence or not of the currently considered paper. It is repeated for all the three existing files:</p>
 
 	        <figure>
-			  <figcaption>Your code title</figcaption>
+			  <figcaption>This is a piece of the code created in order to check the existence or not of the currently considered paper. It is repeated for all the three existing files:</figcaption>
 			  <pre>
-			    <code contenteditable spellcheck="false">
+			    <code contenteditable spellcheck="false" style="text-align: left;">
 			      def verify_existence(paper, doi):
 				    # variables to check whether the paper has been found in one of the CSV files
 				    found_in_analyze = False
