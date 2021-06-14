@@ -123,26 +123,27 @@
 	        <p>Also, since it seems like there will be lots of papers listed in all the three CSV files at a certain point (some to be fully read, some other still to be generally checked) I have tried to implement an semi-automatic way to check whether the new papers retrieved are already present in the CSV files or whether they have still to be added. Also this small software includes a part through which if the name or the ID of the paper considered ar not already listed in the CSV, they are automatically added to papers_to_analyze. But whether the data in which they have been writte in smaller than 2005, then, they are added to papers_to_discard. And finally, the rest of the string necessary in order to identify the papers are added manually.</p>
 
 	        <p>This is a piece of the code created in order to check the existence or not of the currently considered paper. It is repeated for all the three existing files:</p>
-			  <img src="verify_existence.png" style="padding-top: 20px; padding-bottom: 20px">
+			  <img src="imgs/verify_existence.png" style="padding-top: 20px; padding-bottom: 20px">
 
 	        <p>Then, this is the snippet which creates the new line in the CSV:</p>
-			  <img src="add_paper.png" style="padding-top: 20px; padding-bottom: 20px">
-			  
+			  <img src="imgs/add_paper.png" style="padding-top: 20px; padding-bottom: 20px">
+
 			  <br> 
 
 			<h3>Doubts</h3>
 			<ul style="list-style-type: none;">
-				<li></li>
-				<li style="padding-top: 25px;"></li>
+Posticipare gli incontri ogni due settimane perché la ricerca sarà abbastanza lunga
+Cominciare a capire entro quando finire cosa.
+Ho provato ad automatizzare il sistema di ricerca + inserimento se il paper non è già in paper to analyze.
+
+				<li>
+				Come devo comportarmi con i paper di cui non sono specificati pagine o venue? Quando c’è il volume ma non la issue? E con le serie di libri?
+				</li>
+				<li style="padding-top: 25px;"> 
+				è corretto se in alcuni campi inserisco le virgolette in modo che si possano mantenere le virgole come separatore delle parole di quei campi e non tra i campis tessi.
+			</li>
 			</ul>
 			    
-			<h3>Bibliography</h3>
-			    <ul>
-				    <li><a href="https://doi.org/10.1177/0739456X17723971" target=”_blank”>Guidance on Conducting a Systematic Literature Review</a></li>
-				    <li>Kitchenham, B. A. & Charters, S. (2007). <a href="https://www.elsevier.com/__data/promis_misc/525444systematicreviewsguide.pdf" target=”_blank”>Guidelines for performing Systematic Literature Reviews</a> in Software Engineering (EBSE 2007-001). Keele University and Durham University Joint Report.</li>
-				    <li><a href="https://www.aclweb.org/anthology/N18-3011.pdf" target=”_blank”>Construction of the Literature Graph in Semantic Scholar</a></li>
-				    <li><a href="http://slides.com/janagelavik/grobid#/3" target=”_blank”>GROBID in 30 slides - GROBID Documentation</a></li>
-				</ul>
 	      	</div>
 	    </div>
 	  </div>
