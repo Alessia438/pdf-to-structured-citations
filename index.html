@@ -78,6 +78,7 @@
 	  word-wrap: normal;
 	}
 
+
     </style>
  
 </head>
@@ -125,18 +126,18 @@
 			  <figcaption>This is a piece of the code created in order to check the existence or not of the currently considered paper. It is repeated for all the three existing files:</figcaption>
 			  <pre>
 			    <code contenteditable spellcheck="false" style="text-align: left;">
-			      def verify_existence(paper, doi):
-				    # variables to check whether the paper has been found in one of the CSV files
-				    found_in_analyze = False
+def verify_existence(paper, doi):
+    # variables to check whether the paper has been found in one of the CSV files
+    found_in_analyze = False
 
-				    # search in the file papers_to_analyze
-				    with open('papers_to_analyze.csv', 'r', newline='') as csv_analyze:
-				        analyse_reader = csv.reader(csv_analyze, delimiter=',', quotechar='|')
-				        for index, row in enumerate(analyse_reader):
-				            if row[0] == paper or doi in row[1]:
-				                found_in_analyze = True
-				                print('CSV: papers_to_analyze, Index: ', str(index) + ', ', 'Row:', ', '.join(row))
-				                break
+    # search in the file papers_to_analyze
+    with open('papers_to_analyze.csv', 'r', newline='') as csv_analyze:
+        analyse_reader = csv.reader(csv_analyze, delimiter=',', quotechar='|')
+        for index, row in enumerate(analyse_reader):
+            if row[0] == paper or doi in row[1]:
+                found_in_analyze = True
+                print('CSV: papers_to_analyze, Index: ', str(index) + ', ', 'Row:', ', '.join(row))
+                break
 			    </code>
 			  </pre>
 			</figure>
