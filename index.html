@@ -110,12 +110,85 @@
 	    <div class="card-header" id="headingOne">
 	      <h5 class="mb-0" style="text-align: center;">
 	        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-	          Next Meeting: Tuesday 09/21/2021
+	          Next Meeting: Tuesday 09/28/2021
 	        </button>
 	      </h5>
 	    </div>
 
 	    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+	      <div class="card-body" style="text-align: center;">
+	        <h4>Literature review</h4>
+	        <p>The final numbers of the papers accepted/discarded is changed because of the full-text reading:</p>
+	        <ul>
+	        	<li><b>1298 papers</b> rejected, listed in papers_to_discard.csv;</li>
+	        	<li><b>35 papers</b> accepted in papers_to_keeep.csv. The number has drastically decreased from the end of the research since I considered some papers waiting to read their full-text in order to decide whether to accept them or not. Many of these were about only parsers (i.e. software not able to extract information from PDF) or PDF extractors not able to recognize and label the sections or, finally, frameworks which did not use software but rather algorithms and which are not implemented in an accessible way online. Of these 35 papers accepted:</li>
+		        	<ul>
+		        		<li>6 are links to softwares which were cited like this in the citing articles.</li>
+		        		<li>29 are papers about single or multiple software, either valid or invalid.</li>
+		        	</ul>
+	        	<li><b>29 papers</b> described in the csv "papers".</li>
+	        	<li><b>22 software</b> identified and reported in the csv "software".</li>
+	        </ul>
+	        <p>I had not enough time to verify whether all the retrieved software are available or not. Thus, when all the software will be analysed and I'll be sure about which of them are valid, and which are not, I will publish the CSV files in a folder on this GitHub repo.</p>
+	        <p>
+			<p>
+				There are a few software which have not an available link to a repository or a website of the resource itself (either because it is not provided or because it is not working). I considered them too since there is a description about what they consist of and how they work in some papers. In order to deal with the missing links, I considered the software as invalid and I have put in the "repository" cell "N.A." (non available).
+			</p>
+	        	
+	        </p>
+
+	        <h3>Doubts</h3>
+			<ul style="list-style-type: none;">
+				<li>
+					I have considered a pair of software able to work with scanned documents and not or not only with digital ones because they should be considered in the related works section. Shall I remove them from the software list or is it correct to consider and evaluate them too?
+				</li>
+				<li style="padding-top: 25px;">
+					I am not sure about the RefUTU framework (DOI:10.1145/2812428.2812469). Indeed, it seems like there is an online tool (<a href="http://soft.utu.fi/refutu/">http://soft.utu.fi/refutu/</a>) but the link takes to another web page on which there is no trace of REFUTU. Instead if I consider it for its steps, in order to implement it locally, there are some issues, in my opinion. The framework, basically, is composed by three steps: 
+					<ol>
+						<li>
+							PREPROCESSING (optional): use a software which transforms the <b>PDF to plain text</b> (with pdfextract software);
+						</li>
+						<li>
+							1ST STEP of RefUTU: data in plain text are <b>parsed</b> with another software (FreeCite) and the output is an XML file;
+						</li>
+						<li>
+							2ND STEP of RefUTU: takes the output of the first step and transforms the <b>separated fields into a citation</b> (Bibtex format).
+						</li>
+					</ol>
+
+					Actually I would be interested only in the first two steps but, there are two problems in my opinion: 1. I would be interested not in the RefUTU itself, but in the preprocessing and in its first step, so can I say that I am using refUTU?; 2. it may be a problem if I say that I use a software to transform the text to plain text and another to parse the data since there are plenty of parsers so, why should I not try all the parsers in this way?
+				</li>
+				<li style="padding-top: 25px;">
+					Some typologies of software are able to extract information from PDf files and identify and label all the text blocks, including the "References" one (I have not considered the ones which are not able to identify the text blocks, e.g. <a href="https://github.com/pdfminer/pdfminer.six">pdfminer</a> or the ones which do not recognise the "References" block, like <a href="https://github.com/oyvindberg/PDFExtract/">PDFExtract</a>). For what I have seen a part of this kind of software is able to further investigate and separate the instances inside the blocks but some others are not. Thus, I was thinking about not considering the ones belonging to this second case, not because they are not precise but because I already know they wouldn't be able to identify the single references. Shall I consider them too in the related works section or can they be considered as out of topic? (e.g. "<a href="https://github.com/BMKEG/lapdftext">LA-PdfText</a>, a tool that focuses on PDF files of scientific articles and extracts LTBs based on (user-defined) rules, which must be defined for each different article layout").
+				</li>
+			</ul>
+
+			<h3>Bibliography</h3>
+			    <ul>
+			    	<li><a href="https://ad-publications.cs.uni-freiburg.de/benchmark.pdf">A Benchmark and Evaluation for Text Extraction from PDF</a></li>
+			    	<li><a href="https://scfbm.biomedcentral.com/articles/10.1186/1751-0473-7-7">Layout-aware text extraction from full-text PDF of scientific articles</a></li>
+			    	<li><a href="https://github.com/pdfminer/pdfminer.six">pdfminer</a></li>
+			    	<li><a href="https://doi.org/10.1145/2812428.2812469">RefUTU–Automatic Bibliography Database Generation for Freely Formatted Reference Listings</a></li>
+			    	<a href="https://github.com/oyvindberg/PDFExtract/">PDFExtract</a>
+			    </ul>
+			    
+	      	</div>
+	    </div>
+	  </div>
+<!-- end of first card -->
+
+
+<!-- first card -->
+<div class="card" style="width: 90vw;">
+	    <div class="card-header" id="headingOne">
+	      <h5 class="mb-0" style="text-align: center;">
+	        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+	          Tuesday 09/21/2021
+	        </button>
+	      </h5>
+	    </div>
+
+	    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
 	      <div class="card-body" style="text-align: center;">
 	        <h4>Literature review</h4>
 	        <p>The literature review is finished with the following numbers:</p>
