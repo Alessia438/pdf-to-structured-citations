@@ -105,17 +105,56 @@
 	<!-- <div id="accordion"> -->
 	<div>
 
+
 <!-- first card -->
 <div class="card" style="width: 90vw; margin-top: 20vh;">
 	    <div class="card-header" id="headingOne">
 	      <h5 class="mb-0" style="text-align: center;">
 	        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-	          Next meeting: Tuesday 10/05/2021
+	          Next meeting: Tuesday 10/12/2021
 	        </button>
 	      </h5>
 	    </div>
 
 	    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+	      <div class="card-body" style="text-align: center;">
+	        <h4>Software checking</h4>
+	        <p>Up to now I could verify the validity of 4 among applications and libraries:</p>
+	        <ul>
+	        	<li>CERMINE,ONLINE</li>
+	        	<li>EXCITE,ONLINE</li>
+				<li>Scholarcy,ONLINE</li>
+				<li>GROBID,DOWNLOAD</li>
+	        </ul>
+	        Three of these four were online and I simply had to verify whether they work correctly. Instead, I downloaded Grobid. It was quite easy to understand and to manage since there is a good documentation. Differently, some other software I tried to download but which I couldn't manage completely have several problems including lack of documentation (for example for the java library Dr Inventor) and versioning problems (for instance pdffsa4met was lastly committed in 2013 and the software is not working with python3).
+	        <br>
+	        
+	        <h4>Gold standard creation</h4>
+	        <p>For what concerns the gold standard I have made progresses on three aspects:</p>
+	        <ol>
+	        	<li>METADATA: I have selected the final set of minimum metadata to include in the gold standard for the referneces extraction.</li>
+	        	<li>FORMAT: at the moment the format which seems the most suitable to be used as reference model is XML. Indeed, all the tools selected up to now have as main or optional output format XMl, even with different standard. Grobid makes use of TEI as standard model for the XML encoding and it would be the best choice since it is well documented. But before choosing the final format I would prefer to be sure about all the remaining output formats.</li>
+	        	<li>REFERENCES: I started to extract the references from the papers. This is a process which I want to carry on in parallel with the software installation so that when it will be chosen a format I will have the references ready to be encoded. </li>
+	        </ol>
+	        <p>The next step, after the selection of the final format, will be the creation of the conversion algorithms between different file formats.</p>
+			    
+	      	</div>
+	    </div>
+	  </div>
+<!-- end of first card -->
+
+
+<!-- first card -->
+<div class="card" style="width: 90vw;">
+	    <div class="card-header" id="headingOne">
+	      <h5 class="mb-0" style="text-align: center;">
+	        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+	          Tuesday 10/05/2021
+	        </button>
+	      </h5>
+	    </div>
+
+	    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
 	      <div class="card-body" style="text-align: center;">
 	        <h4>Software checking</h4>
 	        <p>I have made a final check of the software retrieved up to know. From 21 retrieved fromt he literature review:</p>
