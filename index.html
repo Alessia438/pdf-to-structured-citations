@@ -111,12 +111,47 @@
 	    <div class="card-header" id="headingOne">
 	      <h5 class="mb-0" style="text-align: center;">
 	        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-	          Next meeting: Tuesday 10/12/2021
+	          Next meeting: Tuesday 10/19/2021
 	        </button>
 	      </h5>
 	    </div>
 
 	    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+	      <div class="card-body" style="text-align: center;">
+	        <h4>Gold standard creation</h4>
+	        <p>I am proceeding with the translation of the references of the selected paper in TEI XML files. I have calculated that by making three papers per day I can get the final XML files in 3 weeks (considering 56 papers as the basis for the gold standard). Up to now it has not been so fast to run this task since I am still trying to understand how to manage some structural aspects of this tasks (see the doubts below).</p>
+	      	</div>
+	      	<h5 style="color: grey; margin-top: 10vh;">Doubts</h5>
+			<ul style="list-style-type: none;">
+				<li>There are some cases in which the articles do not include the page(s) of the article but rather its alphanumerical identifier, e.g. "70:e299", where 70 is the volume and e299 is the article number. In order to be coherent with the metadata selection I should ignore this aspect since it is not the page number. At the same time it is an information which is graphically equipared to the pagination, e.g. "2:71–79" and it is a relevant information used to describe a resource alternative to the pagination where this information is not available (especially for the digital journals). Thus, I'm not sure about whether I should ignore it or not.</li>
+
+				<li style="padding-top: 25px;">I am not sure about how I should treat the legal artifacts since they are not properly grey literature and they are not considered as standards. Some common information is the year and the title but the contents changes between different kinds of legislation and of publication.
+				At the same time they have a complex syntax on the basis of which two or more phrases can be one title or more titles at different levels without a clear syntax making this explicit. E.g. in the citation "NTP (2009) Norma Tecnica Peruana 151.400, 2009. Sacha inchi oil. Requirements, R.035-2009/INDECOPI-CNB: Lima, Peru" it is represented a technical norm where the initial TNP is not an author nor a governal commission but rather the sigla of its identification, a Technical Norm. Then it comes the technical name of the Norm and finally the title itself, followed by another identifier. A solution could be to consider only the title and the year in this case and, more in general the title, year and the "publisher", the commission which deliberated about the specific regulament. But knowing that there is a high risk of failing the title.</li>
+
+				<li style="padding-top: 25px;">For what concerns the latin formula "In" it is problematic to decide whether to consider it or not and, eventually, how to consider it. Indeed the basic structure of the XML citation is:
+					<ol>
+						<li>&lt; analytic &gt;</li>
+						<li>&lt; monogr &gt;</li>
+					</ol>
+				In analytic there is the part related to the article and in monograph the information related to the journal/proceeding. In cas of a Proceeding the formula "In" is of none of the previous mention but rather a sort of metainformation between these two. The only way in which it is present in the TEI rules is in a non structured way were ther eis no "analytic" nor "monogr" but just a single unstructured list of information. So I would prefer for a matter of order and of significance not to consider it since all the structural information are conveyed by the XML structure (the analytic part is structurally included in the monogr one). But at the same time it is in constrast with the metadata identified in the article on which my gold standard is based.
+				</li>
+			</ul>
+	    </div>
+	  </div>
+<!-- end of card one-->
+
+
+<!-- card one -->
+<div class="card" style="width: 90vw;">
+	    <div class="card-header" id="headingOne">
+	      <h5 class="mb-0" style="text-align: center;">
+	        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+	          Tuesday 10/12/2021
+	        </button>
+	      </h5>
+	    </div>
+
+	    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
 	      <div class="card-body" style="text-align: center;">
 	        <h4>Software checking</h4>
 	        <p>Up to now I could verify the validity of 4 among applications and libraries:</p>
@@ -126,7 +161,7 @@
 				<li>Scholarcy,ONLINE</li>
 				<li>GROBID,DOWNLOAD</li>
 	        </ul>
-	        Three of these Seven were online and I simply had to verify whether they work correctly. Instead, I downloaded Grobid. It was quite easy to understand and to manage since there is a good documentation. Differently, some other software I tried to download but which I couldn't manage completely have several problems including lack of documentation (for example for the java library Dr Inventor) and versioning problems (for instance pdffsa4met was lastly committed in 2013 and the software is not working with python3).
+	        <p>Three of these Seven were online and I simply had to verify whether they work correctly. Instead, I downloaded Grobid. It was quite easy to understand and to manage since there is a good documentation. Differently, some other software I tried to download but which I couldn't manage completely have several problems including lack of documentation (for example for the java library Dr Inventor) and versioning problems (for instance pdffsa4met was lastly committed in 2013 and the software is not working with python3).</p>
 	        <br>
 	        
 	        <h4>Gold standard creation</h4>
