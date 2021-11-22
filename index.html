@@ -105,18 +105,40 @@
 	<!-- <div id="accordion"> -->
 	<div>
 
-
 <!-- card one -->
 <div class="card" style="width: 90vw; margin-top: 20vh;">
 	    <div class="card-header" id="headingOne">
 	      <h5 class="mb-0" style="text-align: center;">
 	        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-	          Next meeting: Tuesday 11/15/2021
+	          Next meeting: Tuesday 11/23/2021
 	        </button>
 	      </h5>
 	    </div>
 
 	    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+	      <div class="card-body" style="text-align: center;">
+	        <h4>Gold standard creation - XML files</h4>
+	        <p>The XML files containing the citations in TEI XML format are ready. I have corrected them with the specifications defined in the previous meeting and they are ready to be used for the gold standard.</p>
+	        <br>
+	        <h4>Gold standard creation - Software</h4>
+	        <p>For what concerns the software downloading, I am facing some problems with respect to the ones which have their last commits at least 3/4 years ago. One of the errors I am encountering most is that with the packages and libraries dependencies. For instance, the software pdfssa4met, which doesn't work with python 3 but only with version 2, has problems with the lxml library, as it can be seen in the image below. Even if I already had downloaded the library and all its dependencies (included etree), I tried to uninstall and reinstall it or older versions of it, change its location and path but it still returns the same error: "ImportError: cannot import name etree". Thus, I am confused about which can be the cause of this kind of error and, eventually, if there is a way to get over it.</p>
+	        <img src="img/pdfssa4met_etree_error.png" style="padding-top: 20px>
+	    </div>
+	  </div>
+</div>
+<!-- end of card one-->
+
+<!-- card one -->
+<div class="card" style="width: 90vw;">
+	    <div class="card-header" id="headingOne">
+	      <h5 class="mb-0" style="text-align: center;">
+	        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+	          Tuesday 11/15/2021
+	        </button>
+	      </h5>
+	    </div>
+
+	    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
 	      <div class="card-body" style="text-align: center;">
 	        <h4>Gold standard creation - Software</h4>
 	        <p>For what concerns the software downloading, I have temporarily stopped the phase in order to give more attention to the creation of the XML files. At the moment 6 tools are missing and by the next week they should be downloaded (or rejected in case they cannot be used).</p>
