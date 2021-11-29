@@ -110,7 +110,7 @@
 	    <div class="card-header" id="headingOne">
 	      <h5 class="mb-0" style="text-align: center;">
 	        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-	          Next meeting: Tuesday 11/23/2021
+	          Next meeting: Tuesday 11/30/2021
 	        </button>
 	      </h5>
 	    </div>
@@ -118,11 +118,25 @@
 	    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
 	      <div class="card-body" style="text-align: center;">
 	        <h4>Gold standard creation - XML files</h4>
-	        <p>The XML files containing the citations in TEI XML format are ready. I have corrected them with the specifications defined in the previous meeting and they are ready to be used for the gold standard.</p>
+	        <p>While downloading the parsers I've been making a table out of the XML TEI conversion. I thought it could be useful for me in order to check the final files and at the same time to be inserted in the thesis as an easy way to read the XML files.</p>
+	        <img src="img/xxx.png" style="padding-top: 20px; padding-bottom: 30px">
+
 	        <br>
+
 	        <h4>Gold standard creation - Software</h4>
-	        <p>For what concerns the software downloading, I am facing some problems with respect to the ones which have their last commits at least 3/4 years ago. One of the errors I am encountering most is that with the packages and libraries dependencies. For instance, the software pdfssa4met, whose last release was in 2013 and which doesn't work with python 3 but only with version 2, has problems with the lxml library, as it can be seen in the image below. Even if I already had downloaded the library and all its dependencies (included etree), I tried to uninstall and reinstall it or older versions of it, change its location and path but it still returns the same error: "ImportError: cannot import name etree". Thus, I am confused about which can be the cause of this kind of error and, eventually, if there is a way to get over it.</p>
-	        <img src="img/pdfssa4met_etree_error.png" style="padding-top: 20px; padding-bottom: 30px">
+	        <p>I have correctly downloaded and tested two new tools (for a total of 6):</p>
+	        	<ul>
+	        		<li>PDFX</li>
+	        		<li>PDFSSA4MET</li>
+	        	</ul>
+
+	        <p>I am currently downloading PDFMEF but it is taking quite a long time in order to be functional since it requires lots of other tools on order to be functioning (including Parscit, therefore, once PDFMEF will work, also Parscit will be ok). Also I am almost there with the Science Parse parser, which, at the same time, is quite problematic to download because of the lack of recent updatings. I found a python API which makes use of the Science Parse server, which seems to be working. Finally two last software are missing: CRF++ (for Linux) and DrInventor, the java library.</p>
+	        <p>Also, I discovered that the software <b>cb2bib</b> was not aimed at extracting the references from the references section but rather to extract the article's metadata. It's function indeed was closer to Zotero and Mendeley ones rather than the other reference extractors one.</p>
+	        <p>In the meantime I've made local mind about the styles of the tools output files. The styles are:</p>
+	        <ul>
+	        	<li></li>
+	        	<li></li>
+	        </ul>
 	    </div>
 	  </div>
 </div>
@@ -133,12 +147,35 @@
 	    <div class="card-header" id="headingTwo">
 	      <h5 class="mb-0" style="text-align: center;">
 	        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-	          Tuesday 11/15/2021
+	          Tuesday 11/23/2021
 	        </button>
 	      </h5>
 	    </div>
 
 	    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+	      <div class="card-body" style="text-align: center;">
+	        <h4>Gold standard creation - XML files</h4>
+	        <p>The XML files containing the citations in TEI XML format are ready. I have corrected them with the specifications defined in the previous meeting and they are ready to be used for the gold standard.</p>
+	        <br>
+	        <h4>Gold standard creation - Software</h4>
+	        <p>For what concerns the software downloading, I am facing some problems with respect to the ones which have their last commits at least 3/4 years ago. One of the errors I am encountering most is that with the packages and libraries dependencies. For instance, the software pdfssa4met, whose last release was in 2013 and which doesn't work with python 3 but only with version 2, has problems with the lxml library, as it can be seen in the image below. Even if I already had downloaded the library and all its dependencies (included etree), I tried to uninstall and reinstall it or older versions of it, change its location and path but it still returns the same error: "ImportError: cannot import name etree". Thus, I am confused about which can be the cause of this kind of error and, eventually, if there is a way to get over it.</p>
+	        <img src="img/pdfssa4met_etree_error.png" style="padding-top: 20px; padding-bottom: 30px">
+	    </div>
+	  </div>
+</div>
+<!-- end of card Two-->
+
+<!-- card Three -->
+<div class="card" style="width: 90vw;">
+	    <div class="card-header" id="headingThree">
+	      <h5 class="mb-0" style="text-align: center;">
+	        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+	          Tuesday 11/15/2021
+	        </button>
+	      </h5>
+	    </div>
+
+	    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
 	      <div class="card-body" style="text-align: center;">
 	        <h4>Gold standard creation - Software</h4>
 	        <p>For what concerns the software downloading, I have temporarily stopped the phase in order to give more attention to the creation of the XML files. At the moment 6 tools are missing and by the next week they should be downloaded (or rejected in case they cannot be used).</p>
@@ -164,19 +201,19 @@
 	    </div>
 	  </div>
 </div>
-<!-- end of card Two-->
+<!-- end of card Three-->
 
-<!-- card Three -->
+<!-- card Four -->
 <div class="card" style="width: 90vw;">
-	    <div class="card-header" id="headingThree">
+	    <div class="card-header" id="headingFour">
 	      <h5 class="mb-0" style="text-align: center;">
-	        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+	        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
 	          Tuesday 10/19/2021
 	        </button>
 	      </h5>
 	    </div>
 
-	    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+	    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
 	      <div class="card-body" style="text-align: center;">
 	        <h4>Gold standard creation</h4>
 	        <p>I am proceeding with the translation of the references of the selected paper in TEI XML files. I have calculated that by making three papers per day I can get the final XML files in 3 weeks (considering 56 papers as the basis for the gold standard). Up to now it has not been so fast to run this task since I am still trying to understand how to manage some structural aspects of this tasks (see the doubts below).</p>
@@ -198,20 +235,20 @@
 	    </div>
 	  </div>
 </div>
-<!-- end of card Three-->
+<!-- end of card Four-->
 
 
-<!-- card Four -->
+<!-- card Five -->
 <div class="card" style="width: 90vw;">
-	    <div class="card-header" id="headingFour">
+	    <div class="card-header" id="headingFive">
 	      <h5 class="mb-0" style="text-align: center;">
-	        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+	        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
 	          Tuesday 10/12/2021
 	        </button>
 	      </h5>
 	    </div>
 
-	    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+	    <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
 	      <div class="card-body" style="text-align: center;">
 	        <h4>Software checking</h4>
 	        <p>Up to now I could verify the validity of 4 among applications and libraries:</p>
@@ -236,20 +273,20 @@
 	      	</div>
 	    </div>
 	  </div>
-<!-- end of card Four-->
+<!-- end of card Five-->
 
 
-<!-- card Five-->
+<!-- card Six-->
 <div class="card" style="width: 90vw;">
-	    <div class="card-header" id="headingFive">
+	    <div class="card-header" id="headingSix">
 	      <h5 class="mb-0" style="text-align: center;">
-	        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+	        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
 	          Tuesday 10/05/2021
 	        </button>
 	      </h5>
 	    </div>
 
-	    <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+	    <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordion">
 	      <div class="card-body" style="text-align: center;">
 	        <h4>Software checking</h4>
 	        <p>I have made a final check of the software retrieved up to know. From 21 retrieved fromt he literature review:</p>
@@ -293,20 +330,20 @@
 	      	</div>
 	    </div>
 	  </div>
-<!-- end of card Five-->
+<!-- end of card Six-->
 
 
-<!-- card Six-->
+<!-- card Seven-->
 <div class="card" style="width: 90vw;">
-	    <div class="card-header" id="headingSix">
+	    <div class="card-header" id="headingSeven">
 	      <h5 class="mb-0" style="text-align: center;">
-	        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
+	        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="true" aria-controls="collapseSeven">
 	          Tuesday 09/28/2021
 	        </button>
 	      </h5>
 	    </div>
 
-	    <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordion">
+	    <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordion">
 	      <div class="card-body" style="text-align: center;">
 	        <h4>Literature review</h4>
 	        <p>The final numbers of the papers accepted/discarded is changed because of the full-text reading:</p>
@@ -367,20 +404,20 @@
 	      	</div>
 	    </div>
 	  </div>
-<!-- end of card Six-->
+<!-- end of card Seven-->
 
 
-<!-- card Seven-->
+<!-- card Eight-->
 <div class="card" style="width: 90vw;">
-	    <div class="card-header" id="headingSeven">
+	    <div class="card-header" id="headingEight">
 	      <h5 class="mb-0" style="text-align: center;">
-	        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="true" aria-controls="collapseSeven">
+	        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseEight" aria-expanded="true" aria-controls="collapseEight">
 	          Tuesday 09/21/2021
 	        </button>
 	      </h5>
 	    </div>
 
-	    <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordion">
+	    <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordion">
 	      <div class="card-body" style="text-align: center;">
 	        <h4>Literature review</h4>
 	        <p>The literature review is finished with the following numbers:</p>
@@ -407,20 +444,20 @@
 	      	</div>
 	    </div>
 	  </div>
-<!-- end of card Seven-->
+<!-- end of card Eight-->
 
 
-<!-- card Eight-->
+<!-- card Nine-->
 <div class="card" style="width: 90vw;">
-	    <div class="card-header" id="headingEight">
+	    <div class="card-header" id="headingNine">
 	      <h5 class="mb-0" style="text-align: center;">
-	        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseEight" aria-expanded="true" aria-controls="collapseEight">
+	        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseNine" aria-expanded="true" aria-controls="collapseNine">
 	          Tuesday 09/14/2021
 	        </button>
 	      </h5>
 	    </div>
 
-	    <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordion">
+	    <div id="collapseNine" class="collapse" aria-labelledby="headingNine" data-parent="#accordion">
 	      <div class="card-body" style="text-align: center;">
 	        <h4>Literature review</h4>
 	        <p>The literature review is proceeding with the following numbers:</p>
@@ -436,20 +473,20 @@
 	      	</div>
 	    </div>
 	  </div>
-<!-- end of card Eight -->
+<!-- end of card Nine -->
 
 
-<!-- card Nine-->
+<!-- card Ten-->
 <div class="card" style="width: 90vw;">
-	    <div class="card-header" id="headingNine">
+	    <div class="card-header" id="headingTen">
 	      <h5 class="mb-0" style="text-align: center;">
-	        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseNine" aria-expanded="true" aria-controls="collapseNine">
+	        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseTen" aria-expanded="true" aria-controls="collapseTen">
 	          Tuesday 09/07/2021
 	        </button>
 	      </h5>
 	    </div>
 
-	    <div id="collapseNine" class="collapse" aria-labelledby="headingNine" data-parent="#accordion">
+	    <div id="collapseTen" class="collapse" aria-labelledby="headingTen" data-parent="#accordion">
 	      <div class="card-body" style="text-align: center;">
 	        <h4>Literature review</h4>
 	        <p>The literature review is proceeding with the following numbers:</p>
@@ -465,20 +502,20 @@
 	      	</div>
 	    </div>
 	  </div>
-<!-- end of card Nine-->
+<!-- end of card Ten-->
 
 
-<!-- card Ten-->
+<!-- card Eleven-->
 <div class="card" style="width: 90vw;">
-	    <div class="card-header" id="headingTen">
+	    <div class="card-header" id="headingEleven">
 	      <h5 class="mb-0" style="text-align: center;">
-	        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseTen" aria-expanded="true" aria-controls="collapseTen">
+	        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseEleven" aria-expanded="true" aria-controls="collapseEleven">
 	          Tuesday 08/30/2021
 	        </button>
 	      </h5>
 	    </div>
 
-	    <div id="collapseTen" class="collapse" aria-labelledby="headingTen" data-parent="#accordion">
+	    <div id="collapseEleven" class="collapse" aria-labelledby="headingEleven" data-parent="#accordion">
 	      <div class="card-body" style="text-align: center;">
 	        <h4>Literature review</h4>
 	        <p>The literature review is proceeding with the following numbers:</p>
@@ -501,20 +538,20 @@
 	      	</div>
 	    </div>
 	  </div>
-<!-- end of card Ten -->
+<!-- end of card Eleven -->
 
 
-<!-- card Eleven-->
+<!-- card Twelve-->
 <div class="card" style="width: 90vw;">
-	    <div class="card-header" id="headingEleven">
+	    <div class="card-header" id="headingTwelve">
 	      <h5 class="mb-0" style="text-align: center;">
-	        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseEleven" aria-expanded="true" aria-controls="collapseEleven">
+	        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseTwelve" aria-expanded="true" aria-controls="collapseTwelve">
 	          Tuesday 08/10/2021
 	        </button>
 	      </h5>
 	    </div>
 
-	    <div id="collapseEleven" class="collapse" aria-labelledby="headingEleven" data-parent="#accordion">
+	    <div id="collapseTwelve" class="collapse" aria-labelledby="headingTwelve" data-parent="#accordion">
 	      <div class="card-body" style="text-align: center;">
 	        <h4>Literature review</h4>
 	        <p>The literature review is proceeding with the following numbers:</p>
@@ -530,20 +567,20 @@
 	      	</div>
 	    </div>
 	  </div>
-<!-- end of card Eleven -->
+<!-- end of card Twelve -->
 
 
-<!-- Card Twelve -->
+<!-- Card Thirteen -->
 <div class="card" style="width: 90vw;">
-	    <div class="card-header" id="headingTwelve">
+	    <div class="card-header" id="headingThirteen">
 	      <h5 class="mb-0" style="text-align: center;">
-	        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseTwelve" aria-expanded="true" aria-controls="collapseTwelve">
+	        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseThirteen" aria-expanded="true" aria-controls="collapseThirteen">
 	          Tuesday 08/04/2021
 	        </button>
 	      </h5>
 	    </div>
 
-	    <div id="collapseTwelve" class="collapse" aria-labelledby="headingTwelve" data-parent="#accordion">
+	    <div id="collapseThirteen" class="collapse" aria-labelledby="headingThirteen" data-parent="#accordion">
 	      <div class="card-body" style="text-align: center;">
 	        <h4>Literature review</h4>
 	        <p>The literature review is proceeding with the following numbers:</p>
@@ -558,20 +595,20 @@
 	      	</div>
 	    </div>
 	  </div>
-<!-- end of card Twelve-->
+<!-- end of card Thirteen-->
 
 
-<!-- Thirteen card -->
+<!-- Fourteen card -->
 <div class="card" style="width: 90vw;">
-	    <div class="card-header" id="headingThirteen">
+	    <div class="card-header" id="headingFourteen">
 	      <h5 class="mb-0" style="text-align: center;">
-	        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseThirteen" aria-expanded="true" aria-controls="collapseThirteen">
+	        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseFourteen" aria-expanded="true" aria-controls="collapseFourteen">
 	          Tuesday 07/26/2021
 	        </button>
 	      </h5>
 	    </div>
 
-	    <div id="collapseThirteen" class="collapse" aria-labelledby="headingThirteen" data-parent="#accordion">
+	    <div id="collapseFourteen" class="collapse" aria-labelledby="headingFourteen" data-parent="#accordion">
 	      <div class="card-body" style="text-align: center;">
 	        <h4>Literature review</h4>
 	        <p>The literature review is proceeding with the following numbers:</p>
@@ -586,20 +623,20 @@
 	      	</div>
 	    </div>
 	  </div>
-<!-- end of card Thirteen -->
+<!-- end of card Fourteen -->
 
 
-<!-- card Fourteen-->
+<!-- card Fifteen-->
 <div class="card" style="width: 90vw;">
-	    <div class="card-header" id="headingFourteen">
+	    <div class="card-header" id="headingFifteen">
 	      <h5 class="mb-0" style="text-align: center;">
-	        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseFourteen" aria-expanded="true" aria-controls="collapseFourteen">
+	        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseFifteen" aria-expanded="true" aria-controls="collapseFifteen">
 	          Tuesday 07/19/2021
 	        </button>
 	      </h5>
 	    </div>
 
-	    <div id="collapseFourteen" class="collapse" aria-labelledby="headingFourteen" data-parent="#accordion">
+	    <div id="collapseFifteen" class="collapse" aria-labelledby="headingFifteen" data-parent="#accordion">
 	      <div class="card-body" style="text-align: center;">
 	        <h4>Literature review</h4>
 	        <p>The literature review is proceeding with the following numbers:</p>
@@ -622,20 +659,20 @@
 	      	</div>
 	    </div>
 	  </div>
-<!-- end of card Fourteen-->
+<!-- end of card Fifteen-->
 
 
-<!-- card Fifteen-->
+<!-- card Sixteen-->
 <div class="card" style="width: 90vw;">
-	    <div class="card-header" id="headingFifteen">
+	    <div class="card-header" id="headingSixteen">
 	      <h5 class="mb-0" style="text-align: center;">
-	        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseFifteen" aria-expanded="true" aria-controls="collapseFifteen">
+	        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseSixteen" aria-expanded="true" aria-controls="collapseSixteen">
 	          Wednesday 07/14/2021
 	        </button>
 	      </h5>
 	    </div>
 
-	    <div id="collapseFifteen" class="collapse" aria-labelledby="headingFifteen" data-parent="#accordion">
+	    <div id="collapseSixteen" class="collapse" aria-labelledby="headingSixteen" data-parent="#accordion">
 	      <div class="card-body" style="text-align: center;">
 	        <h4>Literature review</h4>
 	        <p>The literature review is proceeding with the following numbers:</p>
@@ -649,20 +686,20 @@
 	      	</div>
 	    </div>
 	  </div>
-<!-- end of card Fifteen-->
+<!-- end of card Sixteen-->
 
 
-<!-- Sixteen card -->
+<!-- Seventeen card -->
 <div class="card" style="width: 90vw;">
-	    <div class="card-header" id="headingSixteen">
+	    <div class="card-header" id="headingSeventeen">
 	      <h5 class="mb-0" style="text-align: center;">
-	        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseSixteen" aria-expanded="true" aria-controls="collapseSixteen">
+	        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseSeventeen" aria-expanded="true" aria-controls="collapseSeventeen">
 	          Tuesday 07/06/2021
 	        </button>
 	      </h5>
 	    </div>
 
-	    <div id="collapseSixteen" class="collapse" aria-labelledby="headingSixteen" data-parent="#accordion">
+	    <div id="collapseSeventeen" class="collapse" aria-labelledby="headingSeventeen" data-parent="#accordion">
 	      <div class="card-body" style="text-align: center;">
 	        <h4>Literature review</h4>
 	        <p>The literature review is proceeding with the following numbers:</p>
@@ -671,26 +708,26 @@
 	        	<li>16 papers rejected because of the language (e.g. not english but German or Japanese) or the date (before 2005);</li>
 	        	<li>240 papers waiting in papers_to_analyse. Most of these papers have been retrieved through Google Scholar, while ISI and Lens had not so much information.</li>
 	        </ul>
-	        <p>In the code used to search the citing papers through API requests I have added a section through which I can get the papers cited by the current ones (the references). It is not already finished but by today it should be. In this way I have the possibility to fasSixteen up a little more this part of the literature review.</p>
+	        <p>In the code used to search the citing papers through API requests I have added a section through which I can get the papers cited by the current ones (the references). It is not already finished but by today it should be. In this way I have the possibility to fasten up a little more this part of the literature review.</p>
 
 			    
 	      	</div>
 	    </div>
 	  </div>
-<!-- end of Sixteen card -->
+<!-- end of card Seventeen-->
 
 
-<!-- Seventeenth card -->
+<!-- Eighteenth card -->
 <div class="card" style="width: 90vw;">
-	    <div class="card-header" id="headingSeventeen">
+	    <div class="card-header" id="headingEighteen">
 	      <h5 class="mb-0" style="text-align: center;">
-	        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseSeventeen" aria-expanded="true" aria-controls="collapseSeventeen">
+	        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseEighteen" aria-expanded="true" aria-controls="collapseEighteen">
 	          Friday 07/02/2021
 	        </button>
 	      </h5>
 	    </div>
 
-	    <div id="collapseSeventeen" class="collapse" aria-labelledby="headingSeventeen" data-parent="#accordion">
+	    <div id="collapseEighteen" class="collapse" aria-labelledby="headingEighteen" data-parent="#accordion">
 	      <div class="card-body" style="text-align: center;">
 	        <h4>Literature review</h4>
 	        <p>The literature review is proceeding with the following numbers:</p>
@@ -722,20 +759,20 @@
 	      	</div>
 	    </div>
 	  </div>
-<!-- end of Seventeenth card -->
+<!-- end of card Eighteen-->
 
 
-<!-- card Eighteen -->
+<!-- card Nineteen -->
 <div class="card" style="width: 90vw;">
-	    <div class="card-header" id="headingEighteen">
+	    <div class="card-header" id="headingNineteen">
 	      <h5 class="mb-0" style="text-align: center;">
-	        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseEighteen" aria-expanded="true" aria-controls="collapseEighteen">
+	        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseNineteen" aria-expanded="true" aria-controls="collapseNineteen">
 	          Tuesday 06/15/2021
 	        </button>
 	      </h5>
 	    </div>
 
-	    <div id="collapseEighteen" class="collapse" aria-labelledby="headingEighteen" data-parent="#accordion">
+	    <div id="collapseNineteen" class="collapse" aria-labelledby="headingNineteen" data-parent="#accordion">
 	      <div class="card-body" style="text-align: center;">
 	        <h4>Retrieving the papers for the literature review</h4>
 	        <p>Starting from the first seed paper I started processing it like it is described in the protocol. Firstly, I have checked its integrity with respect to the general and more specific parameters; then, I have transferred it in papers_to_keep. Finally I proceeded with the backward and forward search. In order to do so I have retrieved a lot of papers, in particular from the backward search and from the forward search, in particular thanks to Google Scholar.</p>
@@ -774,21 +811,21 @@
 	      	</div>
 	    </div>
 	  </div>
-<!-- end of card Eighteen-->
+<!-- end of card Nineteen-->
 
 
 
-<!-- card Nineteen-->
+<!-- card Twenty-->
 <div class="card" style="width: 90vw;">
-	    <div class="card-header" id="headingNineteen">
+	    <div class="card-header" id="headingTwenty">
 	      <h5 class="mb-0" style="text-align: center;">
-	        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseNineteen" aria-expanded="true" aria-controls="collapseNineteen">
+	        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseTwenty" aria-expanded="true" aria-controls="collapseTwenty">
 	          Tuesday 06/10/2021
 	        </button>
 	      </h5>
 	    </div>
 
-	    <div id="collapseNineteen" class="collapse" aria-labelledby="headingNineteen" data-parent="#accordion">
+	    <div id="collapseTwenty" class="collapse" aria-labelledby="headingTwenty" data-parent="#accordion">
 	      <div class="card-body" style="text-align: center;">
 	        <h3>Udpating the protocol for a systematic literature review</h3>
 	        <p>On Protocols.io I've updated the changes required in order to make more compliant with the general requirements for an open protocol:</p>
@@ -824,20 +861,20 @@
 	      	</div>
 	    </div>
 	  </div>
-<!-- end of card Nineteen-->
+<!-- end of card Twenty-->
 
 
-<!-- card Twenty-->
+<!-- card Twenty-one-->
 <div class="card" style="width: 90vw;">
-	    <div class="card-header" id="headingTwenty">
+	    <div class="card-header" id="headingTwenty-one">
 	      <h5 class="mb-0" style="text-align: center;">
-	        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseTwenty" aria-expanded="true" aria-controls="collapseTwenty">
+	        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseTwenty-one" aria-expanded="true" aria-controls="collapseTwenty-one">
 	          Tuesday 06/01/2021
 	        </button>
 	      </h5>
 	    </div>
 
-	    <div id="collapseTwenty" class="collapse" aria-labelledby="headingTwenty" data-parent="#accordion">
+	    <div id="collapseTwenty-one" class="collapse" aria-labelledby="headingTwenty-one" data-parent="#accordion">
 	      <div class="card-body" style="text-align: center;">
 	        <h3>Updating the protocol for a systematic literature review</h3>
 	        <p>On Protocols.io I've updated the changes required in order to make more compliant with the general requirements for an open protocol:</p>
@@ -867,21 +904,21 @@
 	      	</div>
 	    </div>
 	  </div>
-<!-- end of card Twenty-->
+<!-- end of card Twenty-one-->
 
 
 
 <!-- fourth last card -->
 <div class="card" style="width: 90vw;">
-	    <div class="card-header" id="headingTwenty-one">
+	    <div class="card-header" id="headingTwenty-two">
 	      <h5 class="mb-0" style="text-align: center;">
-	        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseTwenty-one" aria-expanded="true" aria-controls="collapseTwenty-one">
+	        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseTwenty-two" aria-expanded="true" aria-controls="collapseTwenty-two">
 	          Tuesday 05/24/2021
 	        </button>
 	      </h5>
 	    </div>
 
-	    <div id="collapseTwenty-one" class="collapse" aria-labelledby="headingTwenty-one" data-parent="#accordion">
+	    <div id="collapseTwenty-two" class="collapse" aria-labelledby="headingTwenty-two" data-parent="#accordion">
 	      <div class="card-body" style="text-align: center;">
 	        <h3>Udpating the protocol for a systematic literature review</h3>
 	        <p>On Protocols.io I've updated the changes required in order to make more compliant with the general requirements for an open protocol:</p>
@@ -923,15 +960,15 @@
 
 <!-- third last card -->
 <div class="card" style="width: 90vw;">
-	    <div class="card-header" id="headingTwenty-two">
+	    <div class="card-header" id="headingTwenty-three">
 	      <h5 class="mb-0" style="text-align: center;">
-	        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseTwenty-two" aria-expanded="true" aria-controls="collapseTwenty-two">
+	        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseTwenty-three" aria-expanded="true" aria-controls="collapseTwenty-three">
 	          Tuesday 05/18/2021
 	        </button>
 	      </h5>
 	    </div>
 
-	    <div id="collapseTwenty-two" class="collapse" aria-labelledby="headingTwenty-two" data-parent="#accordion">
+	    <div id="collapseTwenty-three" class="collapse" aria-labelledby="headingTwenty-three" data-parent="#accordion">
 	      <div class="card-body" style="text-align: center;">
 	        <h3>Protocol for a systematic literature review</h3>
 
@@ -1068,15 +1105,15 @@
 
 <!-- penultimate card -->
 <div class="card" style="width: 90vw;">
-	    <div class="card-header" id="headingTwenty-three">
+	    <div class="card-header" id="headingTwenty-four">
 	      <h5 class="mb-0" style="text-align: center;">
-	        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseTwenty-three" aria-expanded="true" aria-controls="collapseTwenty-three">
+	        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseTwenty-four" aria-expanded="true" aria-controls="collapseTwenty-four">
 	          Tuesday 05/11/2021
 	        </button>
 	      </h5>
 	    </div>
 
-	    <div id="collapseTwenty-three" class="collapse" aria-labelledby="headingTwenty-three" data-parent="#accordion">
+	    <div id="collapseTwenty-four" class="collapse" aria-labelledby="headingTwenty-four" data-parent="#accordion">
 	      <div class="card-body" style="text-align: center;">
 	        <h3>Research</h3>
 			<br>
@@ -1197,15 +1234,15 @@
 
 <!-- last card -->
 	<div class="card" style="width: 90vw;">
-	    <div class="card-header" id="headingTwenty-four">
+	    <div class="card-header" id="headingTwenty-five">
 	      <h5 class="mb-0" style="text-align: center;">
-	        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseTwenty-four" aria-expanded="true" aria-controls="collapseTwenty-four">
+	        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseTwenty-five" aria-expanded="true" aria-controls="collapseTwenty-five">
 	          Tuesday 04/20/2021
 	        </button>
 	      </h5>
 	    </div>
 
-	    <div id="collapseTwenty-four" class="collapse" aria-labelledby="headingTwenty-four" data-parent="#accordion">
+	    <div id="collapseTwenty-five" class="collapse" aria-labelledby="headingTwenty-five" data-parent="#accordion">
 	      <div class="card-body" style="text-align: center;">
 	        <h3>Research</h3>
 		      <br>
