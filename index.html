@@ -149,12 +149,12 @@
 				<li>in case the authors had two or more names, I considered them separately in the gold standard, but for instance in Jats the names are just considered together as a single string. Should I just copy them as a single string in TEI and then check for single letters in the comparing phase?</li>
 				<li>The generation elements like “Jr” are not tagged in the CERMINE output, while I have tagged them as &lt;genName&gt; in the gold standard files. Shall I just exclude them in case they are not tagged? e.g.
 				<pre style="padding-top: 20px; padding-bottom: 30px">
-				&lt;string-name&gt;
-		            &lt;surname&gt; Green &lt;&sol;surname&gt;
-		            &lt;given-names&gt; JT &lt;&sol;given-names&gt;
-				&lt;&sol;string-name&gt;
-				Jr and
-				[…]
+&lt;string-name&gt;
+	&lt;surname&gt; Green &lt;&sol;surname&gt;
+	&lt;given-names&gt; JT &lt;&sol;given-names&gt;
+&lt;&sol;string-name&gt;
+Jr and
+[…]
 				</pre>
   				</li>
 
