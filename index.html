@@ -118,36 +118,35 @@
 	    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
 	      <div class="card-body" style="text-align: center;">
 	        <h4>PARSERS</h4>
-	        <p>Sadly the remaining parsers are, to me, really hard to download and use.</p>
+	        <p>Sadly the three remaining parsers are, to me, really hard to download and use.</p>
 
 			<ul>
 				<li> The software ScienceParse seems unusable. I tried all the ways possible:</li>
 				<ol>
 					<li> The online tool is not available (the website is down);</li>
-					<li> calling locally the server does not work too, probably as a consequence of the fact that the website does not work; (INSERT PICTURE)</li>
+					<li> calling locally the server does not work too, probably as a consequence of the fact that the website does not work; 
+	        		<img src="img/scienceParse_localrejection.png" style="padding-top: 20px; padding-bottom: 30px"></li>
 					<li> using the python API (https://pypi.org/project/science-parse-api/), but I am meeting issues with the server (created locally with Docker): the get requests do not find a connection with the server itself, even if this last one is up (I can see it from the Docker desktop screen). On some pages (stackoverflow) I have read that it could be a firewall issue and I am not sure about how I could get rid of it. </li>
-					<li> downloading the last version repository and using the server: there are some corrupted files (https://mvnrepository.com/artifact/org.allenai.scienceparse/science-parse-server_2.12/3.0.0) which cannot be downloaded and therefore it is not possible to use it;</li>
-					<li> the same thing is true for the last version  client (https://mvnrepository.com/artifact/org.allenai.scienceparse/science-parse-cli?repo=allenai).</li>
-					<li> finally I tried both the client and the server of version 2.0.3, for which there are no such issues as in the last version but I had problems with the heap space and from my PC I am not able to use it. At a certain point it starts running and it is not able to make any action. It actually provides the same issue as the python API, after a certain amount of time the connection to the remote server is interrupted and the connection turns off.</li>
+					<li> downloading the last version repository and using the server: there are some corrupted files (at this <a href="https://mvnrepository.com/artifact/org.allenai.scienceparse/science-parse-server_2.12/3.0.0">link</a>) which cannot be downloaded and therefore it is not possible to use it;</li>
+					<li> the same thing is true for the last version  client (at this <a href="https://mvnrepository.com/artifact/org.allenai.scienceparse/science-parse-cli?repo=allenai">link</a>).</li>
+					<li> finally I tried both the client and the server of version 2.0.3, for which there are no such issues as in the last version but I had problems with the heap space and from my PC I am not able to use it. At a certain point it starts running and it is not able to make any action. It actually provides the same issue as the python API, after a certain amount of time the connection to the remote server is interrupted and the connection turns off. <img src="img/scienceParse_caching.png" style="padding-top: 20px; padding-bottom: 30px"></li>
 				</ol>
 			<li>The software PDFMEF explicitly requires Python 2.7. But being the things so, I am not able to download one of the dependencies, <i>mysqldb-rich</i>. Also since I have problems in managing Parscit, the only way I could try to make it work is using GROBID instead of Parscit in the parsing phase. But I am not sure it would be a good idea since it would be using the same software for the extraction and analysis, which is the same thing as using only Grobid.</li>
 
-			<li> Del software Parscit non riesco a scaricare le librerie di Perl.</li>
+			<li>Finally, for what concerns the software Parscit I am in troubles in downloading the Perl libraries, again for a matter of software versioning. Also, it is not specified the Perl verison(s) usable with Parscit. <img src="img/perl_libraries.png" style="padding-top: 20px; padding-bottom: 30px"></li>
 
-			<li> Also the fact that my computer is going really slow and when overload restarts is not of great help to work locally :')</li>
+			<li> Also the fact that my computer is going really slow and when overload restarts often is not of great help to work locally :')</li>
 			</ol>
-
-	        <img src="img/metadata_table.png" style="padding-top: 20px; padding-bottom: 30px">
 
 	        <br>
 
 	        <h4>OUTPUT LANGUAGE CONVERSION</h4>
 	        <p> I have recently started to look at the conversion processes. Some of the parsers provide output files standardised following different languages standards: for instance CERMINE and Scholarcy uses Jats/NLM (XML). Differently, EXCITE and pdfssa4met do not specify the type of XML output, even if it seems closer to NLM than TEI. Finally, PDFX provides the output in plain text. Currently, I have to develop 4 types conversion codes, excluding GROBID and the two tools using Jats. </p>
-			<p>CERMINE (http://cermine.ceon.pl/cermine/index.html) output are in Jats/NLM format (which basically is XML, see http://jats.nlm.nih.gov/archiving/tag-library/1.1/attribute/arc-attr-sec-intro.html). It is a standardised XML form but there are no automatic translators, since all the existing convertors start from TEI and arrive to NLM. Therefore I have written a workflow, on how to convert Just in TEI with the python library “lxml” (in particular lxml.etree). </p>
+			<p>CERMINE (<a href="http://cermine.ceon.pl/cermine/index.html">link</a>) output are in Jats/NLM format (which basically is XML, see at this <a href="http://jats.nlm.nih.gov/archiving/tag-library/1.1/attribute/arc-attr-sec-intro.html">link</a>). It is a standardised XML form but there are no automatic translators, since all the existing convertors start from TEI and arrive to NLM. Therefore I have written a workflow, on how to convert Just in TEI with the python library “lxml” (in particular lxml.etree). </p>
 			<p>But I have some doubts about the transformation: </p>
 			<ul>
 				<li>in case the authors had two or more names, I considered them separately in the gold standard, but for instance in Jats the names are just considered together as a single string. Should I just copy them as a single string in TEI and then check for single letters in the comparing phase?</li>
-				<li>The generation elements like “Jr” are not tagged in the CERMINE output, while I have tagged them as <genName> in the gold standard files. Shall I just exclude them in case they are not tagged? e.g.
+				<li>The generation elements like “Jr” are not tagged in the CERMINE output, while I have tagged them as &lt;genName&gt; in the gold standard files. Shall I just exclude them in case they are not tagged? e.g.
 				<code>
 				&lt;string-name&gt;
 		            &lt;surname&gt; Green &lt;&sol;surname&gt;
@@ -158,7 +157,7 @@
 				</code>
   				</li>
 
-				<li>In Jats the tag “source” is referred to different elements that in TEI can be, and in my gold standard actually are, tagged in idfferent ways. Indeed, <source> refers to books, journals, institutions (also publishers) and the pub place. I am not sure about how I should manage this aspect. The problem is basically that these aspects are usually parsed correctly but they have no specific attributes for which it is possible to distinguish among them. And this aspect can be problematic, for instance, in order to define the presence of an analytic section (for instance if there is a journal article) or only a monographic one (e.g. a book). An example:  
+				<li>In Jats the tag “source” is referred to different elements that in TEI can be, and in my gold standard actually are, tagged in idfferent ways. Indeed, &lt;source&gt; refers to books, journals, institutions (also publishers) and the pub place. I am not sure about how I should manage this aspect. The problem is basically that these aspects are usually parsed correctly but they have no specific attributes for which it is possible to distinguish among them. And this aspect can be problematic, for instance, in order to define the presence of an analytic section (for instance if there is a journal article) or only a monographic one (e.g. a book). An example:  
 				<code>	
 					&lt;article-title&gt; The future of grazing&lt;&sol;article-title&gt;
 					&lt;source&gt; In Proceedings of the 3rd Meeting of the EGF &lt;&sol;source&gt;
