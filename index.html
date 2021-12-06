@@ -141,7 +141,7 @@
 
 	        <br>
 
-	        <h4>OUTPUT LANGUAGE CONVERSION</h4>
+	        <h4>OUTPUT FILES CONVERSION</h4>
 	        <p> I have recently started to look at the conversion processes. Some of the parsers provide output files standardised following different languages standards: for instance CERMINE and Scholarcy uses Jats/NLM (XML). Differently, EXCITE and pdfssa4met do not specify the type of XML output, even if it seems closer to NLM than TEI. Finally, PDFX provides the output in plain text. Currently, I have to develop 4 types conversion codes, excluding GROBID and the two tools using Jats. </p>
 			<p>CERMINE (<a href="http://cermine.ceon.pl/cermine/index.html">link</a>) output are in Jats/NLM format (which basically is XML, see at this <a href="http://jats.nlm.nih.gov/archiving/tag-library/1.1/attribute/arc-attr-sec-intro.html">link</a>). It is a standardised XML form but there are no automatic translators, since all the existing convertors start from TEI and arrive to NLM. Therefore I have written a workflow, on how to convert Just in TEI with the python library “lxml” (in particular lxml.etree). </p>
 			<p>But I have some doubts about the transformation: </p>
