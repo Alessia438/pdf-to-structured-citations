@@ -148,7 +148,7 @@
 			<ul>
 				<li>in case the authors had two or more names, I considered them separately in the gold standard, but for instance in Jats the names are just considered together as a single string. Should I just copy them as a single string in TEI and then check for single letters in the comparing phase?</li>
 				<li>The generation elements like “Jr” are not tagged in the CERMINE output, while I have tagged them as &lt;genName&gt; in the gold standard files. Shall I just exclude them in case they are not tagged? e.g.
-				<pre style="padding-top: 20px; padding-bottom: 30px">
+				<pre style="padding-top: 20px; padding-bottom: 30px; background-color: grey;">
 &lt;string-name&gt;
 	&lt;surname&gt; Green &lt;&sol;surname&gt;
 	&lt;given-names&gt; JT &lt;&sol;given-names&gt;
@@ -159,13 +159,13 @@ Jr and
   				</li>
 
 				<li>In Jats the tag “source” is referred to different elements that in TEI can be, and in my gold standard actually are, tagged in idfferent ways. Indeed, &lt;source&gt; refers to books, journals, institutions (also publishers) and the pub place. I am not sure about how I should manage this aspect. The problem is basically that these aspects are usually parsed correctly but they have no specific attributes for which it is possible to distinguish among them. And this aspect can be problematic, for instance, in order to define the presence of an analytic section (for instance if there is a journal article) or only a monographic one (e.g. a book). An example:  
-				<pre style="padding-top: 20px; padding-bottom: 30px">	
-					&lt;article-title&gt; The future of grazing&lt;&sol;article-title&gt;
-					&lt;source&gt; In Proceedings of the 3rd Meeting of the EGF &lt;&sol;source&gt;
-					Working Group 'Grazing'.
-					&lt;source&gt; Wageningen UR &lt;&sol;source&gt;
- 					(University and Research Centre) Livestock Research,
- 					&lt;source&gt; Livestock Research Report &lt;&sol;source&gt;
+				<pre style="padding-top: 20px; padding-bottom: 30px; background-color: grey;">	
+&lt;article-title&gt; The future of grazing&lt;&sol;article-title&gt;
+&lt;source&gt; In Proceedings of the 3rd Meeting of the EGF &lt;&sol;source&gt;
+Working Group 'Grazing'.
+&lt;source&gt; Wageningen UR &lt;&sol;source&gt;
+(University and Research Centre) Livestock Research,
+&lt;source&gt; Livestock Research Report &lt;&sol;source&gt;
 				</pre>
 				<p>Yet another example:</p>
 				<img src="img/source_generic_jats.png" style="padding-top: 20px; padding-bottom: 30px">
