@@ -133,7 +133,8 @@
 				</ol>
 			<li>The software PDFMEF explicitly requires Python 2.7. But being the things so, I am not able to download one of the dependencies, <i>mysqldb-rich</i>. Also since I have problems in managing Parscit, the only way I could try to make it work is using GROBID instead of Parscit in the parsing phase. But I am not sure it would be a good idea since it would be using the same software for the extraction and analysis, which is the same thing as using only Grobid.</li>
 
-			<li>Finally, for what concerns the software Parscit I am in troubles in downloading the Perl libraries, again for a matter of software versioning. Also, it is not specified the Perl verison(s) usable with Parscit. <img src="img/perl_libraries.png" style="padding-top: 20px; padding-bottom: 30px"></li>
+			<li>Finally, for what concerns the software Parscit I am in troubles in downloading the Perl libraries, again for a matter of software versioning. Also, it is not specified the Perl verison(s) usable with Parscit.</li>
+			<img src="img/perl_libraries.png" style="padding-top: 20px; padding-bottom: 30px">
 
 			<li> Also the fact that my computer is going really slow and when overload restarts often is not of great help to work locally :')</li>
 			</ol>
@@ -147,7 +148,7 @@
 			<ul>
 				<li>in case the authors had two or more names, I considered them separately in the gold standard, but for instance in Jats the names are just considered together as a single string. Should I just copy them as a single string in TEI and then check for single letters in the comparing phase?</li>
 				<li>The generation elements like “Jr” are not tagged in the CERMINE output, while I have tagged them as &lt;genName&gt; in the gold standard files. Shall I just exclude them in case they are not tagged? e.g.
-				<pre>
+				<pre style="padding-top: 20px; padding-bottom: 30px">
 				&lt;string-name&gt;
 		            &lt;surname&gt; Green &lt;&sol;surname&gt;
 		            &lt;given-names&gt; JT &lt;&sol;given-names&gt;
@@ -158,7 +159,7 @@
   				</li>
 
 				<li>In Jats the tag “source” is referred to different elements that in TEI can be, and in my gold standard actually are, tagged in idfferent ways. Indeed, &lt;source&gt; refers to books, journals, institutions (also publishers) and the pub place. I am not sure about how I should manage this aspect. The problem is basically that these aspects are usually parsed correctly but they have no specific attributes for which it is possible to distinguish among them. And this aspect can be problematic, for instance, in order to define the presence of an analytic section (for instance if there is a journal article) or only a monographic one (e.g. a book). An example:  
-				<pre>	
+				<pre style="padding-top: 20px; padding-bottom: 30px">	
 					&lt;article-title&gt; The future of grazing&lt;&sol;article-title&gt;
 					&lt;source&gt; In Proceedings of the 3rd Meeting of the EGF &lt;&sol;source&gt;
 					Working Group 'Grazing'.
