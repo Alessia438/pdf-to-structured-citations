@@ -110,12 +110,86 @@
 	    <div class="card-header" id="headingOne">
 	      <h5 class="mb-0" style="text-align: center;">
 	        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-	          Next meeting: Tuesday 11/30/2021
+	          Next meeting: Tuesday 12/06/2021
 	        </button>
 	      </h5>
 	    </div>
 
 	    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+	      <div class="card-body" style="text-align: center;">
+	        <h4>PARSERS</h4>
+	        <p>Sadly the remaining parsers are, to me, really hard to download and use.</p>
+
+			<ul>
+				<li> The software ScienceParse seems unusable. I tried all the ways possible:</li>
+				<ol>
+					<li> The online tool is not available (the website is down);</li>
+					<li> calling locally the server does not work too, probably as a consequence of the fact that the website does not work; (INSERT PICTURE)</li>
+					<li> using the python API (https://pypi.org/project/science-parse-api/), but I am meeting issues with the server (created locally with Docker): the get requests do not find a connection with the server itself, even if this last one is up (I can see it from the Docker desktop screen). On some pages (stackoverflow) I have read that it could be a firewall issue and I am not sure about how I could get rid of it. </li>
+					<li> downloading the last version repository and using the server: there are some corrupted files (https://mvnrepository.com/artifact/org.allenai.scienceparse/science-parse-server_2.12/3.0.0) which cannot be downloaded and therefore it is not possible to use it;</li>
+					<li> the same thing is true for the last version  client (https://mvnrepository.com/artifact/org.allenai.scienceparse/science-parse-cli?repo=allenai).</li>
+					<li> finally I tried both the client and the server of version 2.0.3, for which there are no such issues as in the last version but I had problems with the heap space and from my PC I am not able to use it. At a certain point it starts running and it is not able to make any action. It actually provides the same issue as the python API, after a certain amount of time the connection to the remote server is interrupted and the connection turns off.</li>
+				</ol>
+			<li>The software PDFMEF explicitly requires Python 2.7. But being the things so, I am not able to download one of the dependencies, <i>mysqldb-rich</i>. Also since I have problems in managing Parscit, the only way I could try to make it work is using GROBID instead of Parscit in the parsing phase. But I am not sure it would be a good idea since it would be using the same software for the extraction and analysis, which is the same thing as using only Grobid.</li>
+
+			<li> Del software Parscit non riesco a scaricare le librerie di Perl.</li>
+
+			<li> Also the fact that my computer is going really slow and when overload restarts is not of great help to work locally :')</li>
+			</ol>
+
+	        <img src="img/metadata_table.png" style="padding-top: 20px; padding-bottom: 30px">
+
+	        <br>
+
+	        <h4>OUTPUT LANGUAGE CONVERSION</h4>
+	        <p> I have recently started to look at the conversion processes. Some of the parsers provide output files standardised following different languages standards: for instance CERMINE and Scholarcy uses Jats/NLM (XML). Differently, EXCITE and pdfssa4met do not specify the type of XML output, even if it seems closer to NLM than TEI. Finally, PDFX provides the output in plain text. Currently, I have to develop 4 types conversion codes, excluding GROBID and the two tools using Jats. </p>
+			<p>CERMINE (http://cermine.ceon.pl/cermine/index.html) output are in Jats/NLM format (which basically is XML, see http://jats.nlm.nih.gov/archiving/tag-library/1.1/attribute/arc-attr-sec-intro.html). It is a standardised XML form but there are no automatic translators, since all the existing convertors start from TEI and arrive to NLM. Therefore I have written a workflow, on how to convert Just in TEI with the python library “lxml” (in particular lxml.etree). </p>
+			<p>But I have some doubts about the transformation: </p>
+			<ul>
+				<li>in case the authors had two or more names, I considered them separately in the gold standard, but for instance in Jats the names are just considered together as a single string. Should I just copy them as a single string in TEI and then check for single letters in the comparing phase?</li>
+				<li>The generation elements like “Jr” are not tagged in the CERMINE output, while I have tagged them as <genName> in the gold standard files. Shall I just exclude them in case they are not tagged? e.g.
+				<code>
+				&lt;string-name&gt;
+		            &lt;surname&gt; Green &lt;&sol;surname&gt;
+		            &lt;given-names&gt; JT &lt;&sol;given-names&gt;
+				&lt;&sol;string-name&gt;
+				Jr and
+				[…]
+				</code>
+  				</li>
+
+				<li>In Jats the tag “source” is referred to different elements that in TEI can be, and in my gold standard actually are, tagged in idfferent ways. Indeed, <source> refers to books, journals, institutions (also publishers) and the pub place. I am not sure about how I should manage this aspect. The problem is basically that these aspects are usually parsed correctly but they have no specific attributes for which it is possible to distinguish among them. And this aspect can be problematic, for instance, in order to define the presence of an analytic section (for instance if there is a journal article) or only a monographic one (e.g. a book). An example:  
+				<code>	
+					&lt;article-title&gt; The future of grazing&lt;&sol;article-title&gt;
+					&lt;source&gt; In Proceedings of the 3rd Meeting of the EGF &lt;&sol;source&gt;
+					Working Group 'Grazing'.
+					&lt;source&gt; Wageningen UR &lt;&sol;source&gt;
+ 					(University and Research Centre) Livestock Research,
+ 					&lt;source&gt; Livestock Research Report &lt;&sol;source&gt;
+					(then add pictures of other cases - le due schermate screenshot)
+				</code>
+
+			</li>
+		</ul>
+		
+		<p>For Excite I am expecting a similar behaviour.</p>
+
+	    </div>
+	  </div>
+</div>
+<!-- end of card one-->
+
+<!-- card one -->
+<div class="card" style="width: 90vw;">
+	    <div class="card-header" id="headingOne">
+	      <h5 class="mb-0" style="text-align: center;">
+	        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+	          Tuesday 11/30/2021
+	        </button>
+	      </h5>
+	    </div>
+
+	    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
 	      <div class="card-body" style="text-align: center;">
 	        <h4>Gold standard creation - XML files</h4>
 	        <p>While downloading the parsers I've been making a table out of the XML TEI conversion. I thought it could be useful for me in order to check the final files and at the same time to be inserted in the thesis as an easy way to read the XML files.</p>
@@ -132,11 +206,6 @@
 
 	        <p>I am currently downloading PDFMEF but it is taking quite a long time in order to be functional since it requires lots of other tools on order to be functioning (including Parscit, therefore, once PDFMEF will work, also Parscit will be ok). Also I am almost there with the Science Parse parser, which, at the same time, is quite problematic to download because of the lack of recent updatings. I found a python API which makes use of the Science Parse server, which seems to be working. Finally two last software are missing: CRF++ (for Linux) and DrInventor, the java library.</p>
 	        <p>Also, I discovered that the software <b>cb2bib</b> was not aimed at extracting the references from the references section but rather to extract the article's metadata. It's function indeed was closer to Zotero and Mendeley ones rather than the other reference extractors one.</p>
-	        <p>In the meantime I've made local mind about the styles of the tools output files. The styles are:</p>
-	        <ul>
-	        	<li></li>
-	        	<li></li>
-	        </ul>
 	    </div>
 	  </div>
 </div>
