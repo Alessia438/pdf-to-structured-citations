@@ -105,12 +105,74 @@
 	<!-- <div id="accordion"> -->
 	<div>
 
+
 <!-- card one -->
 <div class="card" style="width: 90vw; margin-top: 20vh;">
 	    <div class="card-header" id="headingOne">
 	      <h5 class="mb-0" style="text-align: center;">
 	        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-	          Next meeting: Tuesday 12/06/2021
+	          Next meeting: Tuesday 12/12/2021
+	        </button>
+	      </h5>
+	    </div>
+
+	    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+	      <div class="card-body" style="text-align: center;">
+	        <h4>PARSERS</h4>
+	        
+	        <p>I was finally able to download all Parscit dependences in Linux but the software is still not working because of apparently missing libraries but, even after downloading them the tool was not able to work. I am not sure whether this can be a related or a basic issue, but the Parscit repository seems created with Perl 5.10, and it would not be a problem to use it locally, apart from the fact that some of the perl libraries do not download for Perl versions < 5.34.0.
+	        Also, answering to a <a href="https://github.com/knmnyn/ParsCit/issues/35">issue</a> regarding one of ParsCit dependences of 29 July 2021, the repository owner says: <quote>Hi ParsCit is not regularly supported anymore as we have more recent toolkits that use neural approaches that outperform this method. You're welcomed to check out NeuralParsCit or SciWING as replacements.</quote>
+
+
+	        <br>
+
+	        <h4>OUTPUT FILES CONVERSION</h4>
+			<p> I started to write the conversion file for CERMINE from Jats to TEI XML and with lxml it all seems to work. But in order to complete the script I should decide how to deal with a complicated aspect of the conversion: the creation of the sections analytic/monograph is based on recognising the presence of an article and the journal in which it is contained or of a chapter and a respective book, otherwise only the section monograph is considered. This distinction should be available also in CERMINE through &lt;article-title&gt; and &lt;source&gt; but it happens often that &lt;source&gt; (the book or the journal) is attributed to wrong metadata (like dates or editors). Also, in case there is only a book or a report, this work is usually defined with both the tags indifferently. Therefore i was wondering whether it is the case to avoid at all the creation of the structure monograph and analytic, which should be the perfect matching to the gold standard, and just consider the sequence of metadata without caring of that structure.</p>
+			<p>The table above shows the way I was thinking to deal with this issue in case I should keep the structures:<p>
+
+			<table>
+			<tr>
+			<th></th>
+			<th>+ &lt;article-title&gt;
+			+ &lt;source&gt;</th>
+			<th>+ &lt;article-title&gt;
+			- &lt;source&gt;</th>
+			<th>- &lt;article-title&gt;
+			+ &lt;source&gt;</th>
+			<th>- &lt;article-title&gt;
+			- &lt;source&gt;</th>
+			</tr>
+			<tr>
+			<th>analytic + monographic</th>
+			<td>X</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			</tr>
+			<tr>
+			<th>monographic</th>
+			<td></td>
+			<td>X</td>
+			<td>X</td>
+			<td>X</td>
+			</tr>
+			<table>
+
+		<p>After solving this problem, the Excite conversion script could be created by tomorrow since the syntax should be really close to the one used by CERMINE. Then, I will skip to the other two XML formats which should be, even not so close, quite close too (for each parser I am checking about four papers in order to understand which is the syntax concretely used by the tool).</p>
+
+
+	    </div>
+	  </div>
+</div>
+<!-- end of card one-->
+
+
+<!-- card one -->
+<div class="card" style="width: 90vw;">
+	    <div class="card-header" id="headingOne">
+	      <h5 class="mb-0" style="text-align: center;">
+	        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+	          Tuesday 12/06/2021
 	        </button>
 	      </h5>
 	    </div>
