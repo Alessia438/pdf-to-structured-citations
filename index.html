@@ -198,7 +198,7 @@ file.close()
 			<p> I started to write the conversion file for CERMINE from Jats to TEI XML and with lxml it all seems to work. But in order to complete the script I should decide how to deal with a complicated aspect of the conversion: the creation of the sections analytic/monograph is based on recognising the presence of an article and the journal in which it is contained or of a chapter and a respective book, otherwise only the section monograph is considered. This distinction should be available also in CERMINE through &lt;article-title&gt; and &lt;source&gt; but it happens often that &lt;source&gt; (the book or the journal) is attributed to wrong metadata (like dates or editors). Also, in case there is only a book or a report, this work is usually defined with both the tags indifferently. Therefore i was wondering whether it is the case to avoid at all the creation of the structure monograph and analytic, which should be the perfect matching to the gold standard, and just consider the sequence of metadata without caring of that structure.</p>
 			<p>The table above shows the way I was thinking to deal with this issue in case I should keep the structures:<p>
 
-			<table style="margin-bottom: 10vh">
+			<table style="margin-bottom: 10vh; width: 100%;">
 			<tr>
 			<th></th>
 			<th>+ &lt;article-title&gt;<br>
