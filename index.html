@@ -123,6 +123,70 @@
 
 	    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
 	      <div class="card-body" style="text-align: center;">
+	        <h4>OUTPUT FILES CONVERSION</h4>
+	        <p>All the converters for the current parsers (excepted of course by GROBID) have been created (i.e. pdfssa4met, Cermine, Scholarcy, Excite, PDFX). Thus, for these 6 parsers it could be time to run. One thing to point out is that Pdfssa4met does not provide an output file: it simply prints the results in the terminal. This can be a problem for the purpose of having the materials located somewhere without the need of using the parser each time in roder to get the results. Also, having an output file helps for the purpose of the translation to TEI. Since I am working on Pdfssa4met locally with python, it is pretty straightforward to eventually create an output file. My idea is to add to the original script some lines of code in which the xml file is automatically created in a selected repository. In this way I can provide to the conversion script an already created and structured document which it can directly parse. Of course, all these modifications, if approved, will be written in this thesis section. The script lines should be those ones:</p>
+	        <pre style="margin-top: 20px; margin-bottom: 30px; padding-left: 10px; padding-left: 7px; background-color: lightgray;">
+with open('path/to/file/xml', 'a') as file:
+	file.write(ref + '\n')
+file.close()
+			</pre>
+
+	        <br>
+
+	        <h4>PARSERS</h4>
+	        <ol>
+	        <li>It came out that the ExCite project does not provide only the Excite tool, but also another tool, called RefExt (<a href="https://locdb.bib.uni-mannheim.de/wordpress/wp-content/uploads/2017/11/EXCITE_LOC-DB.pdf">link</a>). I did not notice it before because on the one hand it seemed like it was part of the ExCite tool process and on the other hand it has been created to work well with the references in German. Instead, this one is another tool based on the analysis of the layout of a PDF. It is based on CERMINE for the identification of the layout and then it works on it. While the pro is that it is able to recognise the footnotes, the con is that it is a model which requires a training to work, and it must be developed entirely in java as it can be read in the repository (<a href="https://github.com/exciteproject/refext">link</a> to GitHub). Thus, in my opinion, it would be useful to keep it but it will require time in order to be working since it is the first parser I try to train.</li>
+
+	        <li>I have read in some of the papers selected that in some cases not only the not working papers are rejected, but also the ones with a really low performance. In particular it is the case of PDFX. While it actually works, the set of metadata which it is actually able to capture is really small. Indeed, while theoretically it should provide title, volume, page, year, edition and url, it concretely retrieves only page and year with an average of 10 citations out of 50. Thus I was wondering if I should consider it (my preferred option) or not, even if I already know the poverty of the average results. The following image is a snapshot of the conrted tei xml file which ignores the metadata not tagged:
+
+			<img src="img/pdfssa4met_snap.png" style="padding-top: 20px; padding-bottom: 30px">
+	        </li>
+	    	</ol>
+
+	        <br>
+
+	        <h4>PARSERS</h4>
+	        <p>Ideas for the comparison script:
+			</p>
+	        <ul>
+			<li>I have read in some papers similar to mine, that the models have been trained before the usage, and for instance the two results (before and after the training) are compared. I am not sure if in my case I have to train the models before using them or if I am supposed to use them with their default behavior. Also the eventual training phase would not be easy and straightforward for all the tools, since I am not sure that all of them allow for training. </li>
+			<li>Also the precision, recall and f-score are based on verified and certifiable models and I am not sure about how to deal with them. In a case they are only based on the precision of the metadata field (tag + content): 0 if wrong and 1 if right. than total divided by the total number of citations. Shall I make an evaluation of the single levels and then in some way sum them?</li>
+			<li>I have tried to get some ideas about how to concretely compare the software and I was able to realize this workflow:
+			<img src="img/eval_flow.png" style="padding-top: 20px; padding-bottom: 30px">
+			</li>
+			</ul>
+
+	        <br>
+	        
+	        <h4>TO do for the vacations</h4>
+	        <p>Missing things that will be done by the end of the vacations:
+	        	<ul>
+					<li>download or reject PDFMEF and Science Parse (+ refext);</li>
+					<li>write their respective conversion code if required;</li>
+					<li>write and test the evaluation code.</li>
+					<li>Other?</li>
+				</ul>
+			</p>
+
+	    </div>
+	  </div>
+	  </div>
+</div>
+<!-- end of card one-->
+
+
+<!-- card one -->
+<div class="card" style="width: 90vw; margin-top: 20vh;">
+	    <div class="card-header" id="headingOne">
+	      <h5 class="mb-0" style="text-align: center;">
+	        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+	          Next meeting: Tuesday 12/12/2021
+	        </button>
+	      </h5>
+	    </div>
+
+	    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+	      <div class="card-body" style="text-align: center;">
 	        <h4>PARSERS</h4>
 	        
 	        <p>I was finally able to download all Parscit dependences in Linux but the software is still not working because of apparently missing libraries but, even after downloading them the tool was not able to work. I am not sure whether this can be a related or a basic issue, but the Parscit repository seems created with Perl 5.10, and it would not be a problem to use it locally, apart from the fact that some of the perl libraries do not download for Perl versions < 5.34.0.
