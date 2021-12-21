@@ -139,7 +139,7 @@ file.close()
 
 	        <li>I have read in some of the papers selected that in some cases not only the not working papers are rejected, but also the ones with a really low performance. In particular it is the case of PDFX. While it actually works, the set of metadata which it is actually able to capture is really small. Indeed, while theoretically it should provide title, volume, page, year, edition and url, it concretely retrieves only page and year with an average of 10 citations out of 50. Thus I was wondering if I should consider it (my preferred option) or not, even if I already know the poverty of the average results. The following image is a snapshot of the conrted tei xml file which ignores the metadata not tagged:
 
-			<img src="img/pdfssa4met_snap.png" style="padding-top: 20px; padding-bottom: 30px">
+			<img src="img/pdfssa4met_snap.png" style="padding-top: 20px; padding-bottom: 30px; width: 100%;">
 	        </li>
 	    	</ol>
 
@@ -152,13 +152,13 @@ file.close()
 			<li>I have read in some papers similar to mine, that the models have been trained before the usage, and for instance the two results (before and after the training) are compared. I am not sure if in my case I have to train the models before using them or if I am supposed to use them with their default behavior. Also the eventual training phase would not be easy and straightforward for all the tools, since I am not sure that all of them allow for training. </li>
 			<li>Also the precision, recall and f-score are based on verified and certifiable models and I am not sure about how to deal with them. In a case they are only based on the precision of the metadata field (tag + content): 0 if wrong and 1 if right. than total divided by the total number of citations. Shall I make an evaluation of the single levels and then in some way sum them?</li>
 			<li>I have tried to get some ideas about how to concretely compare the software and I was able to realize this workflow:
-			<img src="img/eval_flow.png" style="padding-top: 20px; padding-bottom: 30px">
+			<img src="img/eval_flow.png" style="padding-top: 20px; padding-bottom: 30px; width: 100%;">
 			</li>
 			</ul>
 
 	        <br>
 	        
-	        <h4>TO do for the vacations</h4>
+	        <h4>TO do for the holidays</h4>
 	        <p>Missing things that will be done by the end of the vacations:
 	        	<ul>
 					<li>download or reject PDFMEF and Science Parse (+ refext);</li>
