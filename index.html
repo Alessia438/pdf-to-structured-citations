@@ -116,12 +116,88 @@
 	    <div class="card-header" id="headingOne">
 	      <h5 class="mb-0" style="text-align: center;">
 	        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-	          Next meeting: Tuesday 12/12/2021
+	          Next meeting: Tuesday 11/01/2022
 	        </button>
 	      </h5>
 	    </div>
 
 	    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+	      <div class="card-body" style="text-align: center;">
+	        <h4>PARSERS</h4>
+	        <ul>
+	        	<li>Science parse was successfully downloaded.</li>
+	        	<li>I have added to the list of accepted tolls also AnyStyle. Even if its main usage is parsing single references it came out that it is also able to extract references from pdf files. It is a ruby gen to download and which can be used by command line, so it is really simple to explain and use. The Only problem is that, probably because of its essence of reference analyser rather than pdf parser, it is good at analyzing only the pdfs distributed in 1 column. If the references are distributed in two or more columns, then it will provide a mixture of line by line references. The output is a json file so no other script is required.</li>
+	        	<li>PDFMEF was not downloaded because it uses the exact software and does not provide any further step in order to improve or change the actions sequence.</li>
+	        	<li>Last, I am not sure about keeping PdfX in the final evaluation or not. Indeed, it was not the original pdfx mentioned in some papers. That pdfx indeed, is able to deal at 360 degrees with the references, but is not available currently. The pdfx I had downloaded instead is only able to retrieve the urls from the references. Thus, in a certain way it is actually able to retrieve the references, but not their metadata.</li>
+	        </ul>
+	        <p>Thus the final list of parsers is:</p>
+	        <ol>
+	        	<li>AnyStyle</li>
+	        	<li>Cermine</li>
+	        	<li>ExCite</li>
+	        	<li>Grobid</li>
+	        	<li>Pdfssa4met</li>
+	        	<li>PdfX ?</li>
+	        	<li>Scholarcy</li>
+	        	<li>Science Parse</li>
+	        </ol>
+	        <p>Instead, I have divided the list of related papers in different categories with respect to the reasons for which they have not been taken into consideration. Just to show some:</p>
+	        <ol>
+	        	<li>they are not available: pdfx;</li>
+	        	<li>hey are not usable: parsCit;</li>
+	        	<li>they are able to recognise but not to tag the metadata:</li>
+	        	<li>they only provide text blocks classification (thus they don’t identify the single references): SectLabel.</li>
+	        </ol>
+	        <p>If this division can be useful, it can be used as the basis for the thesis related works section. This division, from my point of view, could be helpful as a different classification from the most common one in this type of work, the classification by method of working. Indeed, the parsers are usually identified as based on regex or on crf or on neural networks etc. My idea, instead would be that of recognising 2 types of classification: one for the way in which the tool works, and the other based on the tools capabilities. I.e. </p>
+	        <ol>
+	        	<li>work with single pdf references (they are not able to work with full-texts pdfs);</li>
+	        	<li>recognise only the pdf metadata;</li>
+	        	<li>recognise only the pdf sections;</li>
+	        	<li>recognise the pdf references, no further specification about the metadata;</li>
+	        	<li>recognise pdf references and metadata. Inside this category should be mentioned the parsers which are actually or theoretically able to extract the references metadata but are 1. not available 2. not clearly defined (no specification of a name or repository) 3. not ready to use parsers or 4. out of use.</li>
+	        </ol>
+	        <p>Both these classifications should be later on described.</p>
+
+	        <br>
+
+	        <h4>EVALUATION PHASE</h4>
+	        <ul>
+	        	<li>Conversion files are all ready to use;</li>
+	        	<li>comparison function + evaluation function: I have structured the comparison and evaluation phases in one single file, distributed on 6 functions. The structure appears like Chinese boxes.
+	        		<ol>
+	        			<li>The first level has as input a variable containing the list of the six parsers as strings and the link to the folder containing as subfolders 6 folders, each of them containing the xml files derived from the comparison phase. The output is a json file containing for each parsers’ precision, recall and f-score for the three levels of analysis (references, metadata and metadata text). This function works by calling the function of the single software and obtaining as result a list of values to associate to the three values necessary to compute precision, recall: total number of items retrieved, total number of correct items retrieved and total number of correct items (gold standard) of all the three values. Then it takes the results and computes the precision, recall and f-score, and finally it returns the json file. <div style="background-color: green">DONE</div></li>
+	        			<li>The second level is the single parser level. The inputs are the path to the gold standard folder and to the specific parser folder. The outputs are one json file containing the values of the single xml files and a list containing the sum of the values required to compute precision and recall of each paper. The function, thus, has two main objectives and two parallel workings. It recalls the function which computes the values for each file and on the one hand adds them to a dictionary which will become part of the final json and on the other adds the values to the list that will be returned as final output to the previous function. <div style="background-color: green">DONE</div></li>
+	        			<li>The third and last level is the level of the single file where the values of the single references are computed one by one. The input is the specific file and the output the list of values required by the previous function. The operations and the requirements are listed in the pdf that will be provided at the meeting. <div style="background-color: yellow">IN PROGRESS</div></li>
+	        		</ol>
+	        	</li>
+	        </ul>
+
+	        <br>
+
+	        <h4>THESIS WRITING</h4>
+	        <p>I have started to write some parts of the thesis. I have put down the gold standard creation phase (8 pages) where I have described the three steps and I have provided more info about the dataset. I will provide the pdf so to see if it can be enough or if there is something to improve. Also, I have written the parameters used in the evaluation phase and I would like to provide them before running the tool, in order to see whether they can be considered as good or improvable.</p>
+
+
+	        <br>
+
+	    </div>
+	  </div>
+	  </div>
+</div>
+<!-- end of card one-->
+
+
+<!-- card one -->
+<div class="card" style="width: 90vw;">
+	    <div class="card-header" id="headingOne">
+	      <h5 class="mb-0" style="text-align: center;">
+	        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+	          Tuesday 12/21/2021
+	        </button>
+	      </h5>
+	    </div>
+
+	    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
 	      <div class="card-body" style="text-align: center;">
 	        <h4>OUTPUT FILES CONVERSION</h4>
 	        <p>All the converters for the current parsers (excepted of course by GROBID) have been created (i.e. pdfssa4met, Cermine, Scholarcy, Excite, PDFX). Thus, for these 6 parsers it could be time to run. One thing to point out is that Pdfssa4met does not provide an output file: it simply prints the results in the terminal. This can be a problem for the purpose of having the materials located somewhere without the need of using the parser each time in roder to get the results. Also, having an output file helps for the purpose of the translation to TEI. Since I am working on Pdfssa4met locally with python, it is pretty straightforward to eventually create an output file. My idea is to add to the original script some lines of code in which the xml file is automatically created in a selected repository. In this way I can provide to the conversion script an already created and structured document which it can directly parse. Of course, all these modifications, if approved, will be written in this thesis section. The script lines should be those ones:</p>
@@ -180,7 +256,7 @@ file.close()
 	    <div class="card-header" id="headingOne">
 	      <h5 class="mb-0" style="text-align: center;">
 	        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-	          Next meeting: Tuesday 12/12/2021
+	          Next meeting: Tuesday 12/14/2021
 	        </button>
 	      </h5>
 	    </div>
