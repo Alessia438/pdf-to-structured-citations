@@ -116,12 +116,48 @@
 	    <div class="card-header" id="headingOne">
 	      <h5 class="mb-0" style="text-align: center;">
 	        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-	          Next meeting: Tuesday 25/01/2022
+	          Next meeting: Tuesday 01/02/2022
 	        </button>
 	      </h5>
 	    </div>
 
 	    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+	      <div class="card-body" style="text-align: center;">
+	        <h4>EVALUATION PHASE</h4>
+	        <p>While the evaluatio scirpt is not still concluded because I have just found out a missing operation, it is able to provide partial results which gave me an idea on the results.
+	        What can be seen is that not many references are identified in general by the parsers (following the metadata requirements specified in the methodology). Nonetheless, of those identified references, the metadata and metadata content have wuite a high value (from 0.7 to 0.98). The step which is missing may change only a little things since it will open the acceptance doors also to less precise references. Nonetheless the trend should remain this.</p>
+	        <br>
+	        <h4>THESIS WRITING</h4>
+	        <p>I am writing the results and literature review parts. While the first one needs to have the final results in order to be completed, the latter one will be ready in two days.</p>
+	        <h4>DOUBTS</h4>
+	        <p>
+	        	I have considered the date as a standard metadata to identify the resources. But by verifying this aspect directly on the references, it seems that while this metadata is useful to recognise monographic sources and web pages, it may be less useful with the journal. Indeed, the journal title and the article title or volume + issue seem enough to define a cited source. I am not sure about what to do in this case.
+	        </p>
+	        <p>
+	        	I was thinking about using the Levenshtein distance on all the kind of metadata and avoid the soft tf-idf for the authors only. Indeed, the same resoning made for the other types of data ('Since it is a matter of copying data there is no reason to use analysis specific to text analysis') can be applied also to the authors, avoiding to implement a specific application only for them.
+	        </p>
+	        <p>
+	        	I am not sure about what to do if a file is not parsed at all or if it has zero references. At the moment I have excluded them from the research, but I am not sure it is the correct thing to do since in this way it is not kept track of this missing file.
+	        </p>
+
+	    </div>
+	  </div>
+	  </div>
+</div>
+<!-- end of card one-->
+
+
+<!-- card one -->
+<div class="card" style="width: 90vw;">
+	    <div class="card-header" id="headingOne">
+	      <h5 class="mb-0" style="text-align: center;">
+	        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+	          Tuesday 25/01/2022
+	        </button>
+	      </h5>
+	    </div>
+
+	    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
 	      <div class="card-body" style="text-align: center;">
 	        <h4>CONVERSION TO TEI PHASE</h4>
 	        <p>All the files of all the tools have been translated to XML TEI. The translation files have been saved on my dropbox account, but th enext step will be uploading them on a GitHub repo for the project.</p>
